@@ -1,0 +1,59 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * $font__size) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin button-style($bg: $color__btn-default-bg, $color: $color__btn-default-color, $border: $color__btn-default-border, $ghost: true) {
+    @include font-size();
+    @include pad(($size__pad-sm/1.3) $size__pad);
+	border: 1px solid;
+	border-color: $border;
+	border-radius: $size__border-radius;
+	background: $bg;
+	color: $color;
+	line-height: 1;
+    letter-spacing: auto;
+    font-family: $font__button-font;
+    text-align: center;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: $color;
+    }
+
+	&:hover {
+		border-color: darken($border, 10%);
+		background: darken($bg, 10%);
+	}
+
+	&:active,
+	&:focus {
+		border-color: darken($border, 15%);
+		background: darken($bg, 15%);
+	}
+
+}

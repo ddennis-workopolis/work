@@ -1,0 +1,670 @@
+/*!
+Theme Name: Work
+Theme URI: http://themes.davedennis.me/work
+Author: Dave Dennis
+Author URI: http://www.davedennis.me
+Description: Description
+Template: salient
+Version: 1.0.0
+Text Domain: work
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+
+Work is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+/* line 4, neat/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* In px but do not ad the 'px' at the end */
+/* 300px @ 1170 main container max-width */
+/* line 1, sass/_typography.scss */
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Gotham", "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* line 8, sass/_typography.scss */
+h1, h2, h3, h4, h5, h6,
+#footer-outer .widget h4,
+header#top nav > ul > li.megamenu > ul > li > a {
+  font-family: "Gotham", sans-serif;
+}
+
+/* line 14, sass/_typography.scss */
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+}
+
+/* line 18, sass/_typography.scss */
+h2 {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+/* line 22, sass/_typography.scss */
+h3 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+/* line 26, sass/_typography.scss */
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  line-height: 1.55em;
+}
+
+/* line 32, sass/_typography.scss */
+h5 {
+  font-size: 17.6px;
+  font-size: 1.1rem;
+}
+
+/* Header */
+/* line 43, sass/_typography.scss */
+header#top nav > ul > li > a {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #25282e;
+}
+/* line 48, sass/_typography.scss */
+header#top nav > ul > li > a:hover {
+  color: #25282e;
+}
+/* line 56, sass/_typography.scss */
+header#top nav > ul li.megamenu > ul > li > a {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+}
+/* line 68, sass/_typography.scss */
+header#top nav .buttons a {
+  font-weight: normal;
+}
+
+/* line 74, sass/_typography.scss */
+.sf-menu li {
+  line-height: 1.6 !important;
+}
+
+/* line 78, sass/_typography.scss */
+#header-secondary-outer nav > ul {
+  height: 40px;
+  letter-spacing: normal;
+}
+/* line 82, sass/_typography.scss */
+#header-secondary-outer nav > ul > li > a {
+  padding: 12px 10px !important;
+}
+
+/* line 87, sass/_typography.scss */
+header#top nav .buttons,
+#header-secondary-outer nav > ul > li > a {
+  font-size: 12px !important;
+  font-weight: 400;
+}
+
+/* Footer */
+/* line 94, sass/_typography.scss */
+#footer-outer {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+}
+/* line 97, sass/_typography.scss */
+#footer-outer .widget h4 {
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+@media (min-width: 690px) {
+  /* line 2, sass/_rgs.scss */
+  .col {
+    margin-right: 3%;
+  }
+
+  /* line 6, sass/_rgs.scss */
+  .wpb_column {
+    margin-right: 0px;
+  }
+}
+/* RESET MARGINS */
+/* line 12, sass/_rgs.scss */
+.col.col_last {
+  margin-right: 0;
+}
+
+/* line 13, sass/_rgs.scss */
+.col:last-child {
+  margin-right: 0;
+}
+
+/* COLUMN WIDTH ON DISPLAYS +690px */
+@media (min-width: 690px) {
+  /* line 18, sass/_rgs.scss */
+  .span_1 {
+    width: 5.75%;
+  }
+
+  /* line 19, sass/_rgs.scss */
+  .span_2 {
+    width: 14.25%;
+  }
+
+  /* line 20, sass/_rgs.scss */
+  .span_3 {
+    width: 22.75%;
+  }
+
+  /* line 21, sass/_rgs.scss */
+  .span_4 {
+    width: 31.25%;
+  }
+
+  /* line 22, sass/_rgs.scss */
+  .span_5 {
+    width: 39.75%;
+  }
+
+  /* line 23, sass/_rgs.scss */
+  .span_6 {
+    width: 48.25%;
+  }
+
+  /* line 24, sass/_rgs.scss */
+  .span_7 {
+    width: 56.75%;
+  }
+
+  /* line 25, sass/_rgs.scss */
+  .span_8 {
+    width: 65.25%;
+  }
+
+  /* line 26, sass/_rgs.scss */
+  .span_9 {
+    width: 73.79%;
+  }
+
+  /* line 27, sass/_rgs.scss */
+  .span_10 {
+    width: 82.25%;
+  }
+
+  /* line 28, sass/_rgs.scss */
+  .span_11 {
+    width: 90.75%;
+  }
+
+  /* line 29, sass/_rgs.scss */
+  .span_12 {
+    width: 100%;
+  }
+
+  /* full width content columns */
+  /* line 32, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span1, .full-width-content.vc_row-fluid .vc_col-sm-1 {
+    width: 8.33%;
+  }
+
+  /* line 33, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span2, .full-width-content.vc_row-fluid .vc_col-sm-2 {
+    width: 16.66%;
+  }
+
+  /* line 34, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span3, .full-width-content.vc_row-fluid .vc_col-sm-3 {
+    width: 25%;
+  }
+
+  /* line 35, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span4, .full-width-content.vc_row-fluid .vc_col-sm-4 {
+    width: 33.33%;
+  }
+
+  /* line 36, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span5, .full-width-content.vc_row-fluid .vc_col-sm-5 {
+    width: 41.5%;
+  }
+
+  /* line 37, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span6, .full-width-content.vc_row-fluid .vc_col-sm-6 {
+    width: 50%;
+  }
+
+  /* line 38, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span7, .full-width-content.vc_row-fluid .vc_col-sm-7 {
+    width: 58.3%;
+  }
+
+  /* line 39, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span8, .full-width-content.vc_row-fluid .vc_col-sm-8 {
+    width: 66.66%;
+  }
+
+  /* line 40, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span9, .full-width-content.vc_row-fluid .vc_col-sm-9 {
+    width: 75%;
+  }
+
+  /* line 41, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span10, .full-width-content.vc_row-fluid .vc_col-sm-10 {
+    width: 83.0%;
+  }
+
+  /* line 42, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span11, .full-width-content.vc_row-fluid .vc_col-sm-11 {
+    width: 91.5%;
+  }
+
+  /* line 43, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .vc_span12, .full-width-content.vc_row-fluid .vc_col-sm-12 {
+    width: 100%;
+  }
+
+  /* line 45, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .wpb_column {
+    margin-left: 0 !important;
+  }
+
+  /* line 46, sass/_rgs.scss */
+  .full-width-content.vc_row-fluid .wpb_column .wpb_row, .full-width-content.vc_row-fluid .wpb_column .wpb_wrapper {
+    margin: 0;
+  }
+}
+/* line 2, sass/_layout.scss */
+.container-wrap {
+  min-height: 550px;
+}
+
+/* line 6, sass/_layout.scss */
+#header-outer {
+  box-shadow: none;
+}
+
+/* line 12, sass/_layout.scss */
+header#top nav > ul > li.megamenu > ul.sub-menu {
+  padding: 30px 30px 50px;
+}
+/* line 16, sass/_layout.scss */
+header#top nav > ul > li.megamenu ul li a {
+  padding: 5px 10px;
+}
+/* line 21, sass/_layout.scss */
+header#top nav > ul > li.megamenu > ul > li:first-child {
+  padding-left: 0;
+}
+/* line 24, sass/_layout.scss */
+header#top nav > ul > li.megamenu > ul > li:last-child {
+  padding-right: 0;
+}
+/* line 32, sass/_layout.scss */
+header#top nav .buttons li {
+  padding: 13px 10px;
+  margin-left: 10px;
+}
+
+/* line 41, sass/_layout.scss */
+.slide-out-widget-area-toggle {
+  display: none;
+}
+@media screen and (max-width: 380px) {
+  /* line 41, sass/_layout.scss */
+  .slide-out-widget-area-toggle {
+    display: block;
+  }
+}
+
+/* line 49, sass/_layout.scss */
+body.ascend #search-outer {
+  top: 0 !important;
+  height: 100% !important;
+  z-index: 10000 !important;
+}
+
+/* line 56, sass/_layout.scss */
+#footer-outer input[type=submit],
+#footer-outer button[type=submit],
+#footer-outer input[type="button"] {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+}
+/* line 62, sass/_layout.scss */
+#footer-outer .row {
+  padding: 80px 0;
+}
+
+/* Fields */
+/* line 2, sass/_forms.scss */
+input[type=text],
+textarea,
+input[type=email],
+input[type=search],
+input[type=password],
+input[type=tel],
+input[type=url],
+input[type=date] {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: #FFFFFF;
+  border: 2px solid #ECECEC;
+  box-shadow: none;
+}
+/* line 16, sass/_forms.scss */
+input[type=text]:focus,
+textarea:focus,
+input[type=email]:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=date]:focus {
+  border-color: #77be44;
+}
+
+/* Labels */
+/* line 23, sass/_forms.scss */
+label.label-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Footer */
+/* line 31, sass/_forms.scss */
+#footer-outer input[type=text],
+#footer-outer textarea,
+#footer-outer input[type=email],
+#footer-outer input[type=search],
+#footer-outer input[type=password],
+#footer-outer input[type=tel],
+#footer-outer input[type=url],
+#footer-outer input[type=date] {
+  padding: 5px !important;
+}
+
+/* Buttons */
+/* line 2, sass/_elements.scss */
+input[type=submit],
+button[type=submit],
+input[type="button"] {
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  font-family: "Gotham", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Page Skin */
+/* line 2, sass/_skin.scss */
+html .container-wrap,
+.project-title,
+html .ascend .container-wrap,
+html .ascend .project-title,
+html body .vc_text_separator div,
+html .carousel-wrap[data-full-width="true"] .carousel-heading,
+html .carousel-wrap span.left-border,
+html .carousel-wrap span.right-border,
+html #page-header-wrap,
+html .page-header-no-bg,
+html #full_width_portfolio .project-title.parallax-effect,
+html .portfolio-items .col,
+html .page-template-template-portfolio-php .portfolio-items .col.span_3,
+html .page-template-template-portfolio-php .portfolio-items .col.span_4 {
+  background: #fff;
+}
+
+/* line 19, sass/_skin.scss */
+body.ascend,
+#footer-outer,
+header#top nav > ul > li.megamenu > ul.sub-menu {
+  background: #25282e;
+}
+
+/* Text Colors */
+/* line 26, sass/_skin.scss */
+body, body.ascend {
+  color: #6c7076;
+  /* Links */
+}
+/* line 30, sass/_skin.scss */
+body a, body.ascend a {
+  color: #5f9a35;
+}
+/* line 33, sass/_skin.scss */
+body a:hover, body.ascend a:hover {
+  color: #487428;
+}
+/* line 37, sass/_skin.scss */
+body a:visited, body.ascend a:visited {
+  color: #870057;
+}
+
+/* line 44, sass/_skin.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #25282e;
+}
+
+/* Header */
+/* line 49, sass/_skin.scss */
+#header-outer,
+#header-secondary-outer {
+  background: #FFFFFF;
+}
+
+/* line 54, sass/_skin.scss */
+#header-outer,
+#header-secondary-outer {
+  border-bottom: 1px solid #F6F6F6;
+}
+
+/* line 59, sass/_skin.scss */
+#header-secondary-outer nav > ul > li > a,
+#header-secondary-outer nav > ul > li:last-child {
+  border: none;
+}
+
+/* line 64, sass/_skin.scss */
+header#top nav > ul > li.megamenu > ul.sub-menu,
+#footer-outer {
+  color: rgba(255, 255, 255, 0.4);
+}
+/* line 68, sass/_skin.scss */
+header#top nav > ul > li.megamenu > ul.sub-menu a,
+#footer-outer a {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 71, sass/_skin.scss */
+header#top nav > ul > li.megamenu > ul.sub-menu a:hover,
+#footer-outer a:hover {
+  color: #77be44;
+}
+/* line 76, sass/_skin.scss */
+header#top nav > ul > li.megamenu > ul.sub-menu h1, header#top nav > ul > li.megamenu > ul.sub-menu h2, header#top nav > ul > li.megamenu > ul.sub-menu h3, header#top nav > ul > li.megamenu > ul.sub-menu h4, header#top nav > ul > li.megamenu > ul.sub-menu h5, header#top nav > ul > li.megamenu > ul.sub-menu h6, header#top nav > ul > li.megamenu > ul.sub-menu .widget h4,
+#footer-outer h1,
+#footer-outer h2,
+#footer-outer h3,
+#footer-outer h4,
+#footer-outer h5,
+#footer-outer h6,
+#footer-outer .widget h4 {
+  color: #FFFFFF;
+}
+
+/* line 82, sass/_skin.scss */
+header#top .sf-menu li ul li a {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+/* line 86, sass/_skin.scss */
+header#top .sf-menu li ul li a, header#top .sf-menu li ul li a:hover {
+  background: none !important;
+}
+
+/* line 92, sass/_skin.scss */
+header#top .sf-menu li ul li a,
+header#top nav > ul > li.megamenu > ul ul li a:hover,
+header#top nav > ul > li.megamenu > ul ul li.current-menu-item a {
+  background: none !important;
+}
+
+/* line 98, sass/_skin.scss */
+header#top nav > ul > li.megamenu > ul > li {
+  border-right: none;
+}
+/* line 101, sass/_skin.scss */
+header#top nav > ul > li.megamenu > ul > li > a {
+  color: #FFFFFF !important;
+}
+
+/* Footer */
+/* line 108, sass/_skin.scss */
+.ascend #footer-outer #copyright {
+  border-top: none !important;
+}
+
+/* line 113, sass/_skin.scss */
+.orbit-wrapper div.slider-nav span.right,
+.orbit-wrapper div.slider-nav span.left,
+.flex-direction-nav a,
+.jp-play-bar,
+.jp-volume-bar-value,
+.jcarousel-prev:hover,
+.jcarousel-next:hover,
+.portfolio-items .col[data-default-color="true"] .work-item:not(.style-3) .work-info-bg,
+.portfolio-items .col[data-default-color="true"] .bottom-meta,
+.portfolio-filters a, .portfolio-filters #sort-portfolio,
+.project-attrs li span, .progress li span,
+.nectar-progress-bar span,
+#footer-outer #footer-widgets .col .tagcloud a:hover,
+#sidebar .widget .tagcloud a:hover,
+article.post .more-link span:hover,
+article.post.quote .post-content .quote-inner,
+article.post.link .post-content .link-inner,
+#pagination .next a:hover,
+#pagination .prev a:hover,
+.comment-list .reply a:hover,
+input[type=submit]:hover,
+input[type="button"]:hover,
+#footer-outer #copyright li a.vimeo:hover,
+#footer-outer #copyright li a.behance:hover,
+.toggle.open h3 a,
+.tabbed > ul li a.active-tab,
+[class*=" icon-"],
+.icon-normal,
+.bar_graph li span,
+.nectar-button[data-color-override="false"].regular-button,
+.nectar-button.tilt.accent-color,
+body .swiper-slide .button.transparent_2 a.primary-color:hover,
+#footer-outer #footer-widgets .col input[type="submit"],
+.carousel-prev:hover,
+.carousel-next:hover,
+.blog-recent .more-link span:hover,
+.post-tags a:hover,
+.pricing-column.highlight h3,
+.pricing-table[data-style="flat-alternative"] .pricing-column.highlight h3 .highlight-reason,
+.pricing-table[data-style="flat-alternative"] .pricing-column.accent-color:before,
+#to-top:hover, #to-top.dark:hover,
+body[data-button-style="rounded"] #to-top:after,
+#pagination a.page-numbers:hover, #pagination span.page-numbers.current,
+.single-portfolio .facebook-share a:hover,
+.single-portfolio .twitter-share a:hover,
+.single-portfolio .pinterest-share a:hover,
+.single-post .facebook-share a:hover,
+.single-post .twitter-share a:hover,
+.single-post .pinterest-share a:hover,
+.mejs-controls .mejs-time-rail .mejs-time-current,
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+article.post.quote .post-content .quote-inner,
+article.post.link .post-content .link-inner,
+article.format-status .post-content .status-inner,
+article.post.format-aside .aside-inner,
+body #header-secondary-outer #social li a.behance:hover,
+body #header-secondary-outer #social li a.vimeo:hover,
+#sidebar .widget:hover [class^="icon-"].icon-3x,
+.woocommerce-page div[data-project-style="text_on_hover"] .single_add_to_cart_button,
+article.post.quote .content-inner .quote-inner .whole-link,
+.masonry.classic_enhanced article.post.quote.wide_tall .post-content a:hover .quote-inner,
+.masonry.classic_enhanced article.post.link.wide_tall .post-content a:hover .link-inner,
+.iosSlider .prev_slide:hover,
+.iosSlider .next_slide:hover,
+body [class^="icon-"].icon-3x.alt-style.accent-color,
+body [class*=" icon-"].icon-3x.alt-style.accent-color,
+#slide-out-widget-area, #slide-out-widget-area-bg.fullscreen,
+#header-outer .widget_shopping_cart a.button,
+body[data-button-style="rounded"] .wpb_wrapper .twitter-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .twitter-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .facebook-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .facebook-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .google-plus-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .google-plus-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .nectar-social:hover > *:before,
+body[data-button-style="rounded"] .wpb_wrapper .pinterest-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .pinterest-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .linkedin-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .linkedin-share.hovered:before,
+#header-outer a.cart-contents .cart-wrap span,
+.swiper-slide .button.solid_color a,
+.swiper-slide .button.solid_color_2 a,
+.portfolio-filters, button[type=submit]:hover,
+#buddypress button:hover,
+#buddypress a.button:hover,
+#buddypress ul.button-nav li.current a,
+header#top nav ul .slide-out-widget-area-toggle a:hover i.lines,
+header#top nav ul .slide-out-widget-area-toggle a:hover i.lines:after,
+header#top nav ul .slide-out-widget-area-toggle a:hover i.lines:before,
+#buddypress a.button:focus,
+.text_on_hover.product a.added_to_cart,
+.woocommerce div.product .woocommerce-tabs .full-width-content ul.tabs li a:after,
+.woocommerce div[data-project-style="text_on_hover"] .cart .quantity input.minus,
+.woocommerce div[data-project-style="text_on_hover"] .cart .quantity input.plus,
+.woocommerce .span_4 input[type="submit"].checkout-button,
+.portfolio-filters-inline[data-color-scheme="accent-color"],
+body[data-fancy-form-rcs="1"] [type="radio"]:checked + label:after,
+.select2-container .select2-choice:hover,
+.select2-dropdown-open .select2-choice,
+header#top nav > ul > li.button_solid_color > a:before,
+#header-outer.transparent header#top nav > ul > li.button_solid_color > a:before,
+.tabbed[data-style="minimal"] > ul li a:after,
+.twentytwenty-handle,
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after,
+.masonry.classic_enhanced .posts-container article .meta-category a:hover,
+.masonry.classic_enhanced .posts-container article .video-play-button,
+.bottom_controls #portfolio-nav .controls li a i:after,
+.bottom_controls #portfolio-nav ul:first-child li#all-items a:hover i,
+.nectar_video_lightbox.nectar-button[data-color="default-accent-color"],
+.nectar_video_lightbox.nectar-button[data-color="transparent-accent-color"]:hover,
+.testimonial_slider[data-style="multiple_visible"][data-color*="accent-color"] .flickity-page-dots .dot.is-selected:before,
+.testimonial_slider[data-style="multiple_visible"][data-color*="accent-color"] blockquote.is-selected p,
+.nectar-recent-posts-slider .container .strong span:before, #page-header-bg[data-post-hs="default_minimal"] .inner-wrap > a:hover,
+.single .heading-title[data-header-style="default_minimal"] .meta-category a:hover,
+body.single-post .sharing-default-minimal .nectar-love.loved,
+.nectar-fancy-box:after {
+  background: #77be44 !important;
+}

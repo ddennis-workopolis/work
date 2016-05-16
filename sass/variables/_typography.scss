@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+$font__size:                    16; /* In px but do not ad the 'px' at the end */
+$font__size-sm:                 round($font__size*0.9);
+$font__size-xs:                 round($font__size*0.8);
+
+$font__main:                    'Gotham',"Open Sans",Helvetica,Arial,sans-serif;
+$font__weight:                  400;
+$font__code:                    Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre:                     "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body:        1.6;
+$font__line-height-pre:         1.7;
+
+$font__heading-font:		    'Gotham',sans-serif;
+
+$font__button-font:             $font__heading-font;
+
+$font__h1-size:				    round($font__size * 3);
+$font__h2-size:				    round($font__size * 2.5);
+$font__h3-size:				    round($font__size * 2);
+$font__h4-size:				    round($font__size * 1.5);
+$font__h5-size:				    round($font__size * 1.1);

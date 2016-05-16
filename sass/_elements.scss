@@ -1,0 +1,8 @@
+/* Buttons */
+input[type=submit],
+button[type=submit],
+input[type="button"] {
+    @include font-size();
+    @include pad($size__pad-xs $size__pad-sm);
+    font-family: $font__main;
+}
