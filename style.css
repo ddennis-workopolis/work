@@ -559,6 +559,11 @@ body[data-button-style="rounded"] .section-down-arrow {
       text-transform: none; }
     .home .videomenu-container .button:nth-of-type(2) {
       display: none; }
+  .home .videomenu-container .seeker-link {
+    position: absolute;
+    z-index: 2;
+    right: 30px;
+    bottom: 20px; }
 .home .mobile-buttons {
   display: none; }
 .home #slide-out-widget-area.fullscreen .inner .widget {

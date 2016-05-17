@@ -44,6 +44,13 @@
                 display: none;
             }
         }
+
+        .seeker-link {
+            position: absolute;
+            z-index: 2;
+            right: 30px;
+            bottom: 20px;
+        }
     }
 
     // Buttons displayed for screen size <769px

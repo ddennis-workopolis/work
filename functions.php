@@ -49,6 +49,12 @@ function salient_child_enqueue_styles() {
    		wp_enqueue_style(  'salient-rtl',  get_template_directory_uri(). '/rtl.css', array(), '1', 'screen' );
 }
 
+function custom_work_js() {
+    wp_register_script('main_work', '/wp-content/themes/work/js/main_work.js', array('jquery'), NULL, false);
+    wp_enqueue_script( 'main_work' );
+}
+add_action('wp_enqueue_scripts', 'custom_work_js');
+
 /** Set image sizes **/
 function work_images_init() {
     global $settings;
@@ -111,7 +117,7 @@ function work_filter_large_size_h( $newvalue ) {
 }
 
 function work_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'work_content_width', $settings['content_width'] );
+	// $GLOBALS['content_width'] = apply_filters( 'work_content_width', $settings['content_width'] );
 }
 add_action( 'after_setup_theme', 'work_content_width', 0 );
 
