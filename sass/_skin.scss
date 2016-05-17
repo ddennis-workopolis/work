@@ -1,0 +1,234 @@
+/* Page Skin */
+html .container-wrap,
+.project-title,
+html .ascend .container-wrap,
+html .ascend .project-title,
+html body .vc_text_separator div,
+html .carousel-wrap[data-full-width="true"] .carousel-heading,
+html .carousel-wrap span.left-border,
+html .carousel-wrap span.right-border,
+html #page-header-wrap,
+html .page-header-no-bg,
+html #full_width_portfolio .project-title.parallax-effect,
+html .portfolio-items .col,
+html .page-template-template-portfolio-php .portfolio-items .col.span_3,
+html .page-template-template-portfolio-php .portfolio-items .col.span_4 {
+    background: $color__background-body;
+}
+
+body.ascend,
+#footer-outer,
+header#top nav > ul > li.megamenu > ul.sub-menu {
+    background: $color__site-footer-bg;
+}
+
+/* Text Colors */
+body, body.ascend {
+    color: $color__text-main;
+
+    /* Links */
+    a {
+        color: $color__link;
+
+        &:hover {
+            color: $color__link-hover;
+        }
+
+        &:visited {
+            color: $color__link-visited;
+        }
+    }
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $color__text-heading;
+}
+
+/* Header */
+#header-outer,
+#header-secondary-outer {
+    background: $color__site-header-bg;
+}
+
+#header-outer,
+#header-secondary-outer {
+    border-bottom: 1px solid $color__gray-lightest;
+}
+
+#header-secondary-outer nav > ul > li > a,
+#header-secondary-outer nav > ul > li:last-child {
+    border: none;
+}
+
+header#top nav > ul > li.megamenu > ul.sub-menu,
+#footer-outer {
+    color: $color__site-footer-text;
+
+    a {
+        color: $color__site-footer-link;
+
+        &:hover {
+            color: $color__site-footer-link-hover;
+        }
+    }
+
+    h1,h2,h3,h4,h5,h6,.widget h4 {
+        color: $color__site-footer-heading;
+    }
+}
+
+header#top .sf-menu li ul {
+    li a {
+        @include font-size(0.9);
+        line-height: $font__line-height-body;
+
+        &, &:hover {
+            background: none !important;
+        }
+    }
+}
+
+header#top .sf-menu li ul li a,
+header#top nav > ul > li.megamenu > ul ul li a:hover,
+header#top nav > ul > li.megamenu > ul ul li.current-menu-item a {
+    background: none !important;
+}
+
+header#top nav > ul > li.megamenu > ul > li {
+    border-right: none;
+
+    > a {
+        color: $color__white !important;
+    }
+}
+
+/* Footer */
+.ascend #footer-outer {
+    #copyright {
+        border-top: none !important;
+    }
+}
+
+.orbit-wrapper div.slider-nav span.right,
+.orbit-wrapper div.slider-nav span.left,
+.flex-direction-nav a,
+.jp-play-bar,
+.jp-volume-bar-value,
+.jcarousel-prev:hover,
+.jcarousel-next:hover,
+.portfolio-items .col[data-default-color="true"] .work-item:not(.style-3) .work-info-bg,
+.portfolio-items .col[data-default-color="true"] .bottom-meta,
+.portfolio-filters a, .portfolio-filters #sort-portfolio,
+.project-attrs li span, .progress li span,
+.nectar-progress-bar span,
+#footer-outer #footer-widgets .col .tagcloud a:hover,
+#sidebar .widget .tagcloud a:hover,
+article.post .more-link span:hover,
+article.post.quote .post-content .quote-inner,
+article.post.link .post-content .link-inner,
+#pagination .next a:hover,
+#pagination .prev a:hover,
+.comment-list .reply a:hover,
+input[type=submit]:hover,
+input[type="button"]:hover,
+#footer-outer #copyright li a.vimeo:hover,
+#footer-outer #copyright li a.behance:hover,
+.toggle.open h3 a,
+.tabbed > ul li a.active-tab,
+[class*=" icon-"],
+.icon-normal,
+.bar_graph li span,
+.nectar-button[data-color-override="false"].regular-button,
+.nectar-button.tilt.accent-color,
+body .swiper-slide .button.transparent_2 a.primary-color:hover,
+#footer-outer #footer-widgets .col input[type="submit"],
+.carousel-prev:hover,
+.carousel-next:hover,
+.blog-recent .more-link span:hover,
+.post-tags a:hover,
+.pricing-column.highlight h3,
+.pricing-table[data-style="flat-alternative"] .pricing-column.highlight h3 .highlight-reason,
+.pricing-table[data-style="flat-alternative"] .pricing-column.accent-color:before,
+#to-top:hover, #to-top.dark:hover,
+body[data-button-style="rounded"] #to-top:after,
+#pagination a.page-numbers:hover, #pagination span.page-numbers.current,
+.single-portfolio .facebook-share a:hover,
+.single-portfolio .twitter-share a:hover,
+.single-portfolio .pinterest-share a:hover,
+.single-post .facebook-share a:hover,
+.single-post .twitter-share a:hover,
+.single-post .pinterest-share a:hover,
+.mejs-controls .mejs-time-rail .mejs-time-current,
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current,
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+article.post.quote .post-content .quote-inner,
+article.post.link .post-content .link-inner,
+article.format-status .post-content .status-inner,
+article.post.format-aside .aside-inner,
+body #header-secondary-outer #social li a.behance:hover,
+body #header-secondary-outer #social li a.vimeo:hover,
+#sidebar .widget:hover [class^="icon-"].icon-3x,
+.woocommerce-page div[data-project-style="text_on_hover"] .single_add_to_cart_button,
+article.post.quote .content-inner .quote-inner .whole-link,
+.masonry.classic_enhanced article.post.quote.wide_tall .post-content a:hover .quote-inner,
+.masonry.classic_enhanced article.post.link.wide_tall .post-content a:hover .link-inner,
+.iosSlider .prev_slide:hover,
+.iosSlider .next_slide:hover,
+body [class^="icon-"].icon-3x.alt-style.accent-color,
+body [class*=" icon-"].icon-3x.alt-style.accent-color,
+#slide-out-widget-area, #slide-out-widget-area-bg.fullscreen,
+#header-outer .widget_shopping_cart a.button,
+body[data-button-style="rounded"] .wpb_wrapper .twitter-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .twitter-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .facebook-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .facebook-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .google-plus-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .google-plus-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .nectar-social:hover > *:before,
+body[data-button-style="rounded"] .wpb_wrapper .pinterest-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .pinterest-share.hovered:before,
+body[data-button-style="rounded"] .wpb_wrapper .linkedin-share:before,
+body[data-button-style="rounded"] .wpb_wrapper .linkedin-share.hovered:before,
+#header-outer a.cart-contents .cart-wrap span,
+.swiper-slide .button.solid_color a,
+.swiper-slide .button.solid_color_2 a,
+.portfolio-filters, button[type=submit]:hover,
+#buddypress button:hover,
+#buddypress a.button:hover,
+#buddypress ul.button-nav li.current a,
+header#top nav ul .slide-out-widget-area-toggle a:hover i.lines,
+header#top nav ul .slide-out-widget-area-toggle a:hover i.lines:after,
+header#top nav ul .slide-out-widget-area-toggle a:hover i.lines:before,
+#buddypress a.button:focus,
+.text_on_hover.product a.added_to_cart,
+.woocommerce div.product .woocommerce-tabs .full-width-content ul.tabs li a:after,
+.woocommerce div[data-project-style="text_on_hover"] .cart .quantity input.minus,
+.woocommerce div[data-project-style="text_on_hover"] .cart .quantity input.plus,
+.woocommerce .span_4 input[type="submit"].checkout-button,
+.portfolio-filters-inline[data-color-scheme="accent-color"],
+body[data-fancy-form-rcs="1"] [type="radio"]:checked + label:after,
+.select2-container .select2-choice:hover,
+.select2-dropdown-open .select2-choice,
+header#top nav > ul > li.button_solid_color > a:before,
+#header-outer.transparent header#top nav > ul > li.button_solid_color > a:before,
+.tabbed[data-style="minimal"] > ul li a:after,
+.twentytwenty-handle,
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after,
+.masonry.classic_enhanced .posts-container article .meta-category a:hover,
+.masonry.classic_enhanced .posts-container article .video-play-button,
+.bottom_controls #portfolio-nav .controls li a i:after,
+.bottom_controls #portfolio-nav ul:first-child li#all-items a:hover i,
+.nectar_video_lightbox.nectar-button[data-color="default-accent-color"],
+.nectar_video_lightbox.nectar-button[data-color="transparent-accent-color"]:hover,
+.testimonial_slider[data-style="multiple_visible"][data-color*="accent-color"] .flickity-page-dots .dot.is-selected:before,
+.testimonial_slider[data-style="multiple_visible"][data-color*="accent-color"] blockquote.is-selected p,
+.nectar-recent-posts-slider .container .strong span:before, #page-header-bg[data-post-hs="default_minimal"] .inner-wrap > a:hover,
+.single .heading-title[data-header-style="default_minimal"] .meta-category a:hover,
+body.single-post .sharing-default-minimal .nectar-love.loved,
+.nectar-fancy-box:after {
+    background: $color__brand-primary !important;
+}

@@ -1,0 +1,17 @@
+html, body, h1, h2, h3, h4, h5, h6, p, span {
+    font-family: $font__main !important;
+}
+
+.button {
+    @include button-style($color__btn-primary-bg, $color__btn-default-color, transparent, true);
+}
+
+// styling - Scroll down
+body[data-button-style="rounded"] .section-down-arrow {
+    border: none;
+    opacity: 1;
+    i.fa-angle-down, i.fa-angle-down.top {
+        @include font-size(3);
+        @include transform(none);
+    }
+}

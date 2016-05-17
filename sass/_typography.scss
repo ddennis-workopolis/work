@@ -1,0 +1,103 @@
+body {
+    @include font-size();
+    font-family: $font__main;
+    font-weight: $font__weight;
+    line-height: $font__line-height-body;
+}
+
+h1,h2,h3,h4,h5,h6,
+#footer-outer .widget h4,
+header#top nav > ul > li.megamenu > ul > li > a {
+    font-family: $font__heading-font;
+}
+
+h1 {
+    @include font-size(3);
+}
+
+h2 {
+    @include font-size(2.5);
+}
+
+h3 {
+    @include font-size(2);
+}
+
+h4 {
+    @include font-size(1.5);
+    margin-bottom: $size__pad-xs;
+    line-height: 1.55em;
+}
+
+h5 {
+    @include font-size(1.1);
+}
+
+h6 {
+}
+
+/* Header */
+header#top {
+    nav {
+        > ul {
+            > li > a {
+                @include font-size(0.9);
+                font-weight: 700;
+                color: $color__site-header-link;
+
+                &:hover {
+                    color: $color__site-header-link-hover;
+                }
+            }
+
+            li.megamenu {
+                > ul > li {
+
+                    > a {
+                        @include font-size(1);
+                        line-height: $font__line-height-body;
+                        letter-spacing:normal;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    nav .buttons {
+        a {
+            font-weight: normal;
+        }
+    }
+}
+
+.sf-menu li {
+    line-height: $font__line-height-body !important;
+}
+
+#header-secondary-outer nav > ul {
+    height: 40px;
+    letter-spacing: normal;
+
+    > li > a {
+        @include pad(12px 10px !important);
+    }
+}
+
+header#top nav .buttons,
+#header-secondary-outer nav > ul > li > a {
+    font-size: 12px !important;
+    font-weight: 400;
+}
+
+/* Footer */
+#footer-outer {
+    @include font-size(0.9);
+
+    .widget h4 {
+        @include font-size(1.1);
+        text-transform: none;
+        font-weight: 700;
+        letter-spacing: normal;
+    }
+}

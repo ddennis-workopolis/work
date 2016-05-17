@@ -1,0 +1,41 @@
+/* Fields */
+input[type=text],
+textarea,
+input[type=email],
+input[type=search],
+input[type=password],
+input[type=tel],
+input[type=url],
+input[type=date] {
+    margin-top: $size__pad-xxs;
+    margin-bottom: $size__pad-xxs;
+    background: $color__white;
+    border: 2px solid $color__gray-lighter;
+    box-shadow: none;
+
+    &:focus {
+        border-color: $color__brand-primary;
+    }
+}
+
+/* Labels */
+label {
+	&.label-hidden {
+		position:absolute;
+		clip: rect(0,0,0,0);
+	}
+}
+
+/* Footer */
+#footer-outer {
+    input[type=text],
+    textarea,
+    input[type=email],
+    input[type=search],
+    input[type=password],
+    input[type=tel],
+    input[type=url],
+    input[type=date] {
+        @include pad($size__pad-xxs  !important);
+    }
+}

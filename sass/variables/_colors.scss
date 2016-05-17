@@ -1,0 +1,87 @@
+$color__white:					            #FFFFFF;
+$color__gray-lightest:			            #F6F6F6;
+$color__gray-lighter:			            #ECECEC;
+$color__gray-light:			                #CCCCCC;
+$color__gray:					            #777777;
+$color__gray-dark:				            #555555;
+$color__gray-darker:			            #333333;
+$color__black:					            #000000;
+
+$color__worko-green:			            #77be44;
+$color__worko-green-dark:		            #347E1B;
+$color__worko-orange:			            #ffa100;
+$color__worko-blue:			                #007ac9;
+$color__worko-gray-dark:		            #25282e;
+$color__worko-teal:			                #00b8b0;
+$color__worko-purple:			            #870057;
+$color__worko-magenta:                      #a70240;
+
+$color__brand-primary:                      $color__worko-green;
+$color__brand-secondary:                    $color__worko-blue;
+
+$color__twitter-blue:                       #00ACED;
+$color__facebook-blue:                      #3B5998;
+$color__linkedin-blue:                      #007BB6;
+$color__googleplus-orange:                  #DD4B39;
+$color__youtube-red:                        #BB0000;
+
+$color__background-body:                    #fff;
+$color__background-screen:                  #f1f1f1;
+$color__background-hr:                      $color__gray-lighter;
+$color__background-button:                  #e6e6e6;
+$color__background-pre:                     $color__gray-lightest;
+$color__background-ins:                     #fff9c0;
+
+$color__text-screen:                        #21759b;
+$color__text-input:                         $color__gray;
+$color__text-input-focus:                   $color__worko-gray-dark;
+$color__link:                               darken($color__brand-primary, 10%);
+$color__link-hover:                         darken($color__link, 10%);;
+$color__link-visited:                       $color__worko-purple;
+
+$color__text-main:                          #6c7076;
+$color__text-heading:                       $color__worko-gray-dark;
+
+$color__btn-default-color:                  $color__text-heading;
+$color__btn-default-bg:                     $color__gray-lighter;
+$color__btn-default-bg-hover:               darken($color__btn-default-bg, 10%);
+$color__btn-default-bg-focus:               darken($color__btn-default-bg-hover, 10%);
+$color__btn-default-border:                 $color__btn-default-bg;
+$color__btn-default-border-hover:           $color__btn-default-bg-hover;
+$color__btn-default-border-focus:           $color__btn-default-bg-focus;
+
+$color__btn-primary-bg:                     $color__worko-green;
+$color__btn-primary-border:                 $color__btn-primary-bg;
+$color__btn-blog-category-even-bg:          $color__worko-magenta;
+$color__btn-blog-category-odd-bg:           $color__worko-blue;
+
+$color__btn-ghost-bg:                       transparent;
+
+$color__border-button:                      #ccc #ccc #bbb;
+$color__border-button-hover:                #ccc #bbb #aaa;
+$color__border-button-focus:                #aaa #bbb #bbb;
+$color__border-input:                       $color__gray-lighter;
+$color__border-input-focus:                 $color__brand-primary;
+$color__border-abbr:                        #666;
+
+$color__site-header-bg:                     $color__white;
+$color__site-header-link:                   $color__worko-gray-dark;
+$color__site-header-link-hover:             $color__site-header-link;
+$color__site-header-link-bg:                transparent;
+$color__site-header-link-bg-hover:          $color__site-header-link-bg;
+
+$color__site-header-dark-bg:                $color__worko-gray-dark;
+$color__site-header-dark-link:              rgba($color__white, 0.7);
+$color__site-header-dark-link-hover:        $color__white;
+$color__site-header-dark-link-bg:           transparent;
+$color__site-header-dark-link-bg-hover:     $color__site-header-dark-bg;
+
+$color__site-header-dropdown-bg:            $color__worko-gray-dark;
+$color__site-header-dropdown-link:          rgba($color__white, 0.7);
+$color__site-header-dropdown-link-hover:    $color__white;
+
+$color__site-footer-bg:                     $color__worko-gray-dark;
+$color__site-footer-text:                   rgba($color__white, 0.4);
+$color__site-footer-heading:                $color__white;
+$color__site-footer-link:                   rgba($color__white, 0.6);
+$color__site-footer-link-hover:             $color__brand-primary;
