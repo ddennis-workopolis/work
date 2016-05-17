@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.log
 wp-config.php
 wp-content/advanced-cache.php
@@ -16,6 +17,8 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+=======
+>>>>>>> c8786b99926e90042057026505ce990226e6d312
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -64,4 +67,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.scssc
+<<<<<<< HEAD
 config.rb
+=======
+config.rb
+>>>>>>> c8786b99926e90042057026505ce990226e6d312

@@ -209,7 +209,7 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false') { ?> <div id="
 
 					<nav class="mobile-nav">
 						<ul class="mobile-buttons" data-user-set-ocm="">
-							<li id="signin-btn"><div><a href="www.google.ca"><span class="avatar"></span><?php _e('',THEME_NAME); ?></a></div> </li>
+							<li id="signin-btn"><div><a href="#"><span class="avatar"></span><?php _e('',THEME_NAME); ?></a></div> </li>
 							<li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span></a></div> </li>
 						</ul>
 					</nav>

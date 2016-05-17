@@ -111,7 +111,7 @@ function work_filter_large_size_h( $newvalue ) {
 }
 
 function work_content_width() {
-	// $GLOBALS['content_width'] = apply_filters( 'work_content_width', $settings['content_width'] );
+	$GLOBALS['content_width'] = apply_filters( 'work_content_width', $settings['content_width'] );
 }
 add_action( 'after_setup_theme', 'work_content_width', 0 );
 
