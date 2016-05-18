@@ -49,6 +49,7 @@ function salient_child_enqueue_styles() {
    		wp_enqueue_style(  'salient-rtl',  get_template_directory_uri(). '/rtl.css', array(), '1', 'screen' );
 }
 
+/** Enqueue custom javascript files **/
 function custom_work_js() {
     wp_register_script('main_work', '/wp-content/themes/work/js/main_work.js', array('jquery'), NULL, false);
     wp_enqueue_script( 'main_work' );

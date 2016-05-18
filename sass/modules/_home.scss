@@ -58,12 +58,6 @@
         display: none;
     }
 
-    #slide-out-widget-area.fullscreen {
-        .inner .widget {
-            @include pad(0);
-        }
-    }
-
     // Clients-container --> .clients-title / .clients
     .clients-container {
         background-color: $color__background-hr;
@@ -189,7 +183,7 @@
 
             .toggle {
 
-                // toggle - closed - sytling
+                // toggle Closed - styling
                 h3 a {
                     border-bottom: 1px solid $color__background-hr !important;
                     height: 60px;
@@ -304,6 +298,7 @@
 
         // Recommended --> .recommended-solutions-text / .recommended-solutions
         .recommended {
+            text-align: left;
         }
         .recommended-solutions-title {
             color: $color__btn-primary-bg;
@@ -553,91 +548,6 @@
         }
     }
 
-    // Media query - screen sizes >768 and < 1000px
-    @media screen and (max-width:1000px) {
-
-        #header-outer header#top {
-
-            #logo {
-                .default-logo {
-                    display: none;
-                }
-                .retina-logo {
-                    display: block !important;
-                }
-            }
-            nav {
-
-                ul {
-                    padding: 0 !important;
-                    margin: 0 !important;
-                }
-                &.mobile-nav {
-                    background-color: transparent;
-                    display: block !important;
-                    float: right;
-                    height: auto;
-                    margin: 0 !important;
-                    padding: 0 !important;
-                    top: 0;
-                }
-            }
-        }
-
-        .mobile-buttons {
-            display: block !important;
-
-            li {
-                display: inline-block !important;
-                float: right;
-                line-height: 64px;
-                padding: 0 !important;
-                margin: 0 !important;
-                width: auto !important;
-
-                .avatar {
-                    background: url("/wordpress/wp-content/themes/work/images/avatar.png");
-                    height: 25px;
-                    width: 25px;
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-
-                &#signin-btn {
-                    float: right !important;
-                    margin: 0 0 0 10px!important;
-                }
-                &#search-btn {
-                    display: inline-block !important;
-
-                    .icon-salient-search {
-                        background-color: $color__site-header-bg;
-                        color: $color__text-main;
-                        height: auto;
-                    }
-                }
-            }
-        }
-
-        &.ascend #search-outer {
-            display: block !important;
-
-            #search input[type="text"] {
-                font-size: 26px !important;
-                word-wrap: break-word;
-            }
-
-            ::-webkit-input-placeholder {
-               color: red;
-            }
-        }
-
-        .slide-out-widget-area-toggle {
-            left: 50px;
-            top: 10px !important;
-        }
-    }
-
     // Media query - screen sizes >640px and < 769px
     @include media($tablet) {
 
@@ -646,14 +556,6 @@
                 a {
                     font-size: 18px !important;
                     padding: 15px 35px !important;
-                }
-            }
-        }
-
-        #slide-out-widget-area.fullscreen {
-            .inner .widget.widget_nav_menu {
-                li a {
-                    font-size: 48px;
                 }
             }
         }
@@ -721,14 +623,6 @@
                     &:nth-of-type(2) {
                         display: block;
                     }
-                }
-            }
-        }
-
-        #slide-out-widget-area.fullscreen {
-            .inner .widget.widget_nav_menu {
-                li a {
-                    font-size: 48px;
                 }
             }
         }
@@ -807,14 +701,6 @@
                     &:nth-of-type(2) {
                         display: block;
                     }
-                }
-            }
-        }
-
-        #slide-out-widget-area.fullscreen {
-            .inner .widget.widget_nav_menu {
-                li a {
-                    font-size: 48px;
                 }
             }
         }
