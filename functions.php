@@ -49,6 +49,19 @@ function salient_child_enqueue_styles() {
    		wp_enqueue_style(  'salient-rtl',  get_template_directory_uri(). '/rtl.css', array(), '1', 'screen' );
 }
 
+/** Vendor styles and javascript - Odometer - dynamic counter **/
+function vendor_files() {
+    wp_enqueue_style( 'odometer-style', '/wp-content/themes/work/css/vendor/odometer-theme-car.css', array());
+    wp_enqueue_style( 'flipclock-style', '/wp-content/themes/work/css/vendor/flipclock.css', array());
+    wp_register_script('odometer-script', '/wp-content/themes/work/js/vendor/odometer.min.js', array(), NULL, false);
+    wp_register_script('flipclock-script', '/wp-content/themes/work/js/vendor/flipclock.min.js', array(), NULL, false);
+    wp_register_script('flipclock-counter', '/wp-content/themes/work/js/vendor/counter.js', array(), NULL, false);
+    wp_enqueue_script( 'flipclock-script');
+    wp_enqueue_script( 'flipclock-counter');
+    wp_enqueue_script( 'odometer-script');
+}
+add_action('wp_enqueue_scripts', 'vendor_files');
+
 /** Enqueue custom javascript files **/
 function custom_work_js() {
     wp_register_script('main_work', '/wp-content/themes/work/js/main_work.js', array('jquery'), NULL, false);

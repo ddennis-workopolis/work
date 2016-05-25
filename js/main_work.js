@@ -4,4 +4,24 @@
             $('.seeker-link').fadeOut(500);
         }
     });
+
+    $(document).ready(function() {
+        var clock = $('.counter').FlipClock(65000, {
+            clockFace: 'Counter'
+        });
+
+        var count = 0;
+
+        setTimeout(function() {
+            setInterval(function() {
+                clock.increment();
+            }, 1000);
+        });
+
+    });
+
+    setTimeout(function(){
+        odometer.innerHTML = 65100;
+    }, 1000);
+
 })(jQuery);

@@ -1,0 +1,248 @@
+.pricing-container {
+    .col.section-title {
+        border-bottom: 0;
+        @include pad(0);
+    }
+
+    .pricing-container-table {
+        border: none;
+    }
+
+    .pricing-container-table-mobile {
+        display: none;
+    }
+
+    div.pricing-column {
+        box-shadow: none;
+        h3, .pricing-column-content {
+            border: none !important;
+        }
+
+        h3 {
+            color: $color__text-heading !important;
+            font-size: 24px;
+            padding: 20px 4px 4px;
+        }
+
+        h4, .dollar-sign {
+            font-size: 62px !important;
+            line-height: 64px !important;
+        }
+
+        h4 {
+            @include padding(0 null null);
+        }
+
+        .dollar-sign {
+            font-weight: $font__weight__bold !important;
+            top: 0px !important;
+            right: -20px !important;
+        }
+
+        .interval {
+            border-bottom: 3px solid #000;
+            color: $color__text-main;
+            font-size: 14px;
+            font-weight: $font__weight__light;
+            line-height: 18px;
+        }
+
+        &:first-child {
+            h3, h4, span {
+                color: $color__text-heading-light !important;
+            }
+            ul {
+                li {
+                    color: $color__text-heading !important;
+                    font-size: 14px;
+                    font-weight: $font__weight__bold;
+                    line-height: 55px;
+                    padding-top: 0px;
+                }
+            }
+        }
+
+        &:last-child {
+            background-color: $color__brand-primary;
+            @include margin(0);
+            h3 {
+                background-color: $color__brand-primary;
+            }
+            h3, h4 {
+                color: $color__text-heading-light !important;
+            }
+            .interval {
+                color: $color__text-heading-light;
+            }
+            ul li {
+                background-color: $color__brand-primary;
+            }
+            a {
+                background-color: $color__btn-primary-color !important;
+                color: $color__brand-primary;
+            }
+        }
+    }
+    .pricing-column-content {
+        ul {
+            li {
+                background-color: $color__background-body;
+                border-bottom: 1px solid rgba(37, 40, 46, 0.1);
+                padding: 15px 25px 0px;
+                line-height: 40px;
+                &:first-child {
+                    border-top: none;
+                }
+                img {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        a {
+            color: $color__text-heading-light;
+            font-size: 16px;
+            text-transform: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    .pricing-container {
+        .pricing-container-table {
+            display: none;
+        }
+
+        .pricing-container-table-mobile {
+            display: block;
+        }
+
+        div.pricing-column {
+            &:first-child, &:nth-of-type(2n), h3 {
+                background-color: $color__text-heading;
+                color: $color__text-heading-light !important;
+            }
+
+            &:first-child, &:nth-of-type(2n) {
+                h4, .interval {
+                    color: $color__text-heading-light !important;
+                }
+                .pricing-column-content ul {
+                    height: auto !important;
+                    li {
+                        background-color: $color__text-heading;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        color: $color__text-heading-light !important;
+                    }
+                }
+            }
+
+            &:first-child {
+                ul li {
+                    font-size: 16px;
+                }
+            }
+
+            &:last-child {
+                .pricing-column-content ul {
+                    li {
+                        color: $color__text-heading-light !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .pricing-container {
+        .pricing-container-table {
+            display: none;
+        }
+
+        .pricing-container-table-mobile {
+            display: block;
+        }
+
+        div.pricing-column {
+            &:first-child, &:nth-of-type(2n), h3 {
+                background-color: $color__text-heading;
+                color: $color__text-heading-light !important;
+            }
+
+            &:first-child, &:nth-of-type(2n) {
+                h4, .interval {
+                    color: $color__text-heading-light !important;
+                }
+                .pricing-column-content ul {
+                    height: auto !important;
+                    li {
+                        background-color: $color__text-heading;
+                        color: $color__text-heading-light !important;
+                    }
+                }
+            }
+
+            &:first-child {
+                ul li {
+                    font-size: 16px;
+                }
+            }
+
+            &:last-child {
+                .pricing-column-content ul {
+                    li {
+                        color: $color__text-heading-light !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .pricing-container {
+        .pricing-container-table {
+            display: none;
+        }
+
+        .pricing-container-table-mobile {
+            display: block;
+        }
+
+        div.pricing-column {
+            &:first-child, &:nth-of-type(2n), h3 {
+                background-color: $color__text-heading;
+                color: $color__text-heading-light !important;
+            }
+
+            &:first-child, &:nth-of-type(2n) {
+                h4, .interval {
+                    color: $color__text-heading-light !important;
+                }
+                .pricing-column-content ul {
+                    height: auto !important;
+                    li {
+                        background-color: $color__text-heading;
+                        color: $color__text-heading-light !important;
+                    }
+                }
+            }
+
+            &:first-child {
+                ul li {
+                    font-size: 16px;
+                }
+            }
+
+            &:last-child {
+                .pricing-column-content ul {
+                    li {
+                        color: $color__text-heading-light !important;
+                    }
+                }
+            }
+        }
+    }
+}

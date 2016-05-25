@@ -1,0 +1,152 @@
+// Generic class to be applied to any row that has 2/3/4 columns
+.description-container {
+
+    .col.section-title {
+        border-bottom: 0;
+        @include pad(0);
+    }
+
+    .odometer-container {
+        text-align: center;
+        width: 100%;
+    }
+
+    .odometer {
+        font-size: 50px;
+    }
+
+    .odometer-hide {
+        display: none;
+    }
+
+    .description-text {
+        @include margin(null null 50px);
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .description-column-post-text {
+        font-size: 16px;
+        font-weight: $font__weight__light;
+        @include margin(65px null null);
+        a, a:visited {
+            color: $color__link-body;
+            font-weight: $font__weight__bold;
+        }
+    }
+
+    // Generic styling for text within each columns
+    .description-column-title {
+        color: $color__text-heading;
+        font-size: 24px;
+        font-weight: $font__weight__bold;
+        line-height: 30px;
+        @include margin(null null 15px);
+    }
+    .description-column-text {
+        font-size: 14px;
+        font-weight: $font__weight__light;
+        line-height: 20px;
+    }
+
+    // Styling for rows with 2 columns
+    .description-columns-two {
+        .description-column {
+            width: 48.25%;
+            &:not(first-child) {
+                @include margin(null null null 3%);
+            }
+            img {
+                @include margin(null null 30px);
+                width: 100%;
+            }
+        }
+    }
+
+    // Styling for rows with 3 columns
+    .description-columns-three {
+        .description-column {
+            width: 30%;
+            &:not(first-child) {
+                @include margin(null null null 3%);
+            }
+            img {
+                @include margin(null null 30px);
+                width: 100%;
+            }
+        }
+    }
+
+    // Styling for rows with 4 columns
+    .description-columns-four {
+        background-image: url("/wordpress/wp-content/themes/work/images/separator.png");
+        background-repeat: no-repeat;
+        background-position: center 30%;
+        img {
+            @include margin(40px null 30px);
+        }
+        .description-column-title, .description-column-text {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .description-container {
+        .description-columns-four {
+            background-image: none;
+        }
+    }
+}
+
+// Media query - screen sizes >640px and < 769px
+@include media($tablet) {
+    .description-container {
+        .description-columns-two, .description-columns-three {
+            .description-column {
+                width: 100%;
+                &:not(first-child) {
+                    @include margin(null null null 0);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    .description-container {
+        @include padding(0 20px);
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .description-container {
+        @include padding(0 20px);
+        .description-columns-two, .description-columns-three {
+            .description-column {
+                width: 100%;
+                &:not(first-child) {
+                    @include margin(null null null 0);
+                }
+            }
+        }
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .description-container {
+        @include padding(0 20px);
+        .description-columns-two, .description-columns-three {
+            .description-column {
+                width: 100%;
+                &:not(first-child) {
+                    @include margin(null null null 0);
+                }
+            }
+        }
+    }
+}

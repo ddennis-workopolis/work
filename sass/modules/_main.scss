@@ -6,7 +6,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span {
     @include button-style($color__btn-primary-bg, $color__btn-default-color, transparent, true);
 }
 
-// styling - Scroll down
+// styling - Scroll down - On videomenu-container
 body[data-button-style="rounded"] .section-down-arrow {
     border: none;
     opacity: 1;
@@ -14,4 +14,21 @@ body[data-button-style="rounded"] .section-down-arrow {
         @include font-size(3);
         @include transform(none);
     }
+}
+
+.main-content ul li {
+    list-style: none;
+}
+
+/*
+    Standard margins are applied to container elements.
+    Use this when you wish to target a specific element
+    without affecting others.
+*/
+#extra-spacing-top {
+    margin-top: 100px;
+}
+
+#extra-spacing-bottom {
+    margin-bottom: 100px;
 }

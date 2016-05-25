@@ -38,9 +38,12 @@ $color__text-input-focus:                   $color__worko-gray-dark;
 $color__link:                               darken($color__brand-primary, 10%);
 $color__link-hover:                         darken($color__link, 10%);;
 $color__link-visited:                       $color__worko-purple;
+$color__link-body:                          $color__worko-blue;
 
 $color__text-main:                          #6c7076;
+$color__text-main-secondary:                #96999f;
 $color__text-heading:                       $color__worko-gray-dark;
+$color__text-heading-light:                 $color__white;
 
 $color__btn-default-color:                  $color__text-heading;
 $color__btn-default-bg:                     $color__gray-lighter;
@@ -51,7 +54,9 @@ $color__btn-default-border-hover:           $color__btn-default-bg-hover;
 $color__btn-default-border-focus:           $color__btn-default-bg-focus;
 
 $color__btn-primary-bg:                     $color__worko-green;
+$color__btn-secondary-bg:                   $color__worko-blue;
 $color__btn-primary-border:                 $color__btn-primary-bg;
+$color__btn-primary-color:                  $color__white;
 $color__btn-blog-category-even-bg:          $color__worko-magenta;
 $color__btn-blog-category-odd-bg:           $color__worko-blue;
 

@@ -1,61 +1,9 @@
 // Styling - Home Page
 .home {
 
-// Video background
-    .videomenu-container {
-        @include margin(null null 0);
-
-        // Video background overlay and size
-        .video-texture, .mobile-video-image {
-            background-blend-mode: overlay;
-            background-color: rgba($color__site-header-dark-bg, 0.5);
-            background-position: top center;
-        }
-
-        // Heading
-        .swiper-slide .content  {
-            padding: 0 !important;
-            h2 {
-                font-weight: $font__weight__bold;
-                line-height: 72px;
-                @include font-size(4);
-                @include margin(null null 25px null);
-            }
-        }
-
-        // Description text
-        p span {
-            font-weight: $font__weight__regular;
-            line-height: 24px;
-            @include font-size(1.125);
-        }
-
-        // Button styling
-        .button {
-            background-color: transparent;
-            a {
-                font-size: 18px;
-                font-family: $font__main;
-                font-weight: $font__weight__bold;
-                letter-spacing: 0px !important;
-                text-transform: none;
-            }
-            &:nth-of-type(2) {
-                display: none;
-            }
-        }
-
-        .seeker-link {
-            position: absolute;
-            z-index: 2;
-            right: 30px;
-            bottom: 20px;
-        }
-    }
-
-    // Buttons displayed for screen size <769px
-    .mobile-buttons {
-        display: none;
+    // Uniform margin below every container
+    .clients-container, .solutions-container, .posts-container {
+        @include margin(null null 100px null);
     }
 
     // Clients-container --> .clients-title / .clients
@@ -331,7 +279,7 @@
             }
             .button {
                 border-style: none;
-                color: $color__white;
+                color: $color__btn-primary-color;
                 display: inline-block;
                 font-size: 12px;
                 height: 32px;
@@ -396,14 +344,14 @@
             &:nth-of-type(even) {
                 .content-inner .meta-category a {
                     background-color: $color__btn-blog-category-even-bg;
-                    color: $color__white;
+                    color: $color__btn-primary-color;
                 }
             }
 
             &:nth-of-type(odd) {
                 .content-inner .meta-category a {
                     background-color: $color__btn-blog-category-odd-bg;
-                    color: $color__white;
+                    color: $color__btn-primary-color;
                 }
             }
         }
@@ -463,10 +411,6 @@
         }
     }
 
-    .clients-container, .solutions-container, .posts-container {
-        @include margin(null null 100px null);
-    }
-
     .solutions-container, .posts-container {
         .col.section-title {
             border: none;
@@ -483,56 +427,8 @@
         }
     }
 
-    // Media query - screen sizes > 1200px
-    @include media($desktop-lg) {
-        .videomenu-container {
-            .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
-
-                h2 {
-                    line-height: 72px;
-                    font-size: 64px !important;
-                }
-
-                .button {
-                    a {
-                        padding: 15px 35px !important;
-                    }
-                }
-            }
-        }
-    }
-
-    // Media query - screen sizes > 1025px and <=1200px
-    @include media($desktop) {
-        .videomenu-container {
-            .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
-
-                h2 {
-                    line-height: 72px;
-                    font-size: 64px !important;
-                }
-
-                .button {
-                    a {
-                        font-size: 18px !important;
-                        padding: 15px 35px !important;
-                    }
-                }
-            }
-        }
-    }
-
     // Media query - screen sizes >768 and < 1025px
     @include media($tablet-lg) {
-
-        .videomenu-container {
-            .nectar-slider-wrap[data-full-width="false"] .swiper-slide .button {
-                a {
-                    font-size: 18px !important;
-                    padding: 15px 35px !important;
-                }
-            }
-        }
 
         .no-carousel.clients {
             div {
@@ -550,15 +446,6 @@
 
     // Media query - screen sizes >640px and < 769px
     @include media($tablet) {
-
-        .videomenu-container {
-            .nectar-slider-wrap[data-full-width="false"] .swiper-slide .button {
-                a {
-                    font-size: 18px !important;
-                    padding: 15px 35px !important;
-                }
-            }
-        }
 
         .no-carousel.clients {
             div {
@@ -599,33 +486,6 @@
 
     // Media query - screen sizes >380px and < 641px
     @include media($mobile-lg) {
-
-        .videomenu-container {
-            .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
-
-                h2 {
-                    margin-bottom: 10px;
-                }
-
-                .content {
-                    padding: 0 !important;
-                }
-
-                .button {
-                    a {
-                        font-size: 18px !important;
-                        padding: 10px 15px !important;
-                    }
-
-                    &:first-child {
-                        display: none
-                    }
-                    &:nth-of-type(2) {
-                        display: block;
-                    }
-                }
-            }
-        }
 
         .no-carousel.clients {
             div {
@@ -676,34 +536,6 @@
 
     // Media query - screen sizes <380px
     @include media($mobile) {
-
-        .videomenu-container {
-            .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
-
-                .content {
-                    padding: 0 !important;
-
-                    h2 {
-                        margin-bottom: 0;
-                        line-height: 36px !important;
-                    }
-                }
-
-                .button {
-                    a {
-                        font-size: 18px !important;
-                        padding: 10px 15px !important;
-                    }
-
-                    &:first-child {
-                        display: none
-                    }
-                    &:nth-of-type(2) {
-                        display: block;
-                    }
-                }
-            }
-        }
 
         .no-carousel.clients {
             div {

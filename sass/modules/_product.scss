@@ -1,0 +1,70 @@
+// Apllied to full width background images with content within (in columns)
+.product-container {
+    height: 750px !important;
+    .product-column {
+        color: $color__text-heading-light;
+        @include pad(100px 0px 100px 0);
+    }
+    .product-column-title {
+        font-size: 48px;
+        font-weight: $font__weight__bold;
+        line-height: 56px;
+        @include margin(null null 10px);
+    }
+    .product-column-text {
+        font-weight: $font__weight__light;
+        @include margin(null null 50px);
+    }
+    .product-column-feature {
+        p {
+            font-weight: $font__weight__light;
+            @include margin(null null 30px);
+            @include pad(0 0 0 60px);
+            &:before {
+                content: '';
+                background-image: url("/wordpress/wp-content/themes/work/images/checkmark.png");
+                background-repeat: no-repeat;
+                height: 40px;
+                left: 0px;
+                position: absolute;
+                width: 40px;
+                @include margin(5px null null);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .product-container {
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    .product-container {
+        padding: 0 20px !important;
+        .product-column {
+            @include padding(null 35px null null);
+        }
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .product-container {
+        padding: 0 20px !important;
+        .product-column {
+            @include padding(null 35px null null);
+        }
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .product-container {
+        padding: 0 20px !important;
+        .product-column {
+            @include padding(null 35px null null);
+        }
+    }
+}

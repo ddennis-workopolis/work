@@ -1,0 +1,61 @@
+// Apllied to full width background images with content within (in columns)
+.support-container {
+    height: 550px !important;
+    .support-column {
+        color: $color__text-heading-light;
+        @include pad(100px 100px 100px 0);
+    }
+    .support-column-title {
+        font-size: 48px;
+        font-weight: $font__weight__bold;
+        line-height: 56px;
+        @include margin(null null 10px);
+    }
+    .support-column-text {
+        font-size: 18px;
+        font-weight: $font__weight__light;
+        @include margin(null null 50px);
+    }
+    .button {
+        display: inline-block;
+        &:first-child {
+            background-color: $color__btn-default-border;
+            @include margin(null 25px null null);
+        }
+        &:last-child {
+            background-color: $color__btn-secondary-bg;
+            border-color: $color__btn-default-border;
+            color: $color__btn-primary-color;
+        }
+    }
+    .highlight {
+        font-weight: $font__weight__bold;
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .support-container {
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    .support-container {
+        padding: 0 20px !important;
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .support-container {
+        padding: 0 20px !important;
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .support-container {
+        padding: 0 20px !important;
+    }
+}
