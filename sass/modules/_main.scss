@@ -10,7 +10,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, span {
 body[data-button-style="rounded"] .section-down-arrow {
     border: none;
     opacity: 1;
-    i.fa-angle-down, i.fa-angle-down.top {
+    i.fa-angle-down,
+    i.fa-angle-down.top {
         @include font-size(3);
         @include transform(none);
     }
@@ -18,6 +19,20 @@ body[data-button-style="rounded"] .section-down-arrow {
 
 .main-content ul li {
     list-style: none;
+}
+
+/*
+    Adding a margin below every element. Home Page has
+    a different layout.
+*/
+body:not(.home) {
+    .videomenu-container,
+    .solutions-list-container,
+    .description-container,
+    .testimonials-container,
+    .support-container {
+        margin-bottom: 100px !important;
+    }
 }
 
 /*

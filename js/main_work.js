@@ -15,11 +15,12 @@
         setTimeout(function() {
             setInterval(function() {
                 clock.increment();
-            }, 1000);
+            }, 3000);
         });
 
     });
 
+// Remove Odometer
     setTimeout(function(){
         odometer.innerHTML = 65100;
     }, 1000);

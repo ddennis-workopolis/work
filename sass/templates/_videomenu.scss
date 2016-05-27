@@ -62,10 +62,10 @@
 // Media query - screen sizes > 1170px
 @include media($desktop-lg) {
     .videomenu-container {
-        .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
+        .nectar-slider-wrap[data-full-width="false"] .swiper-slide .content {
 
             h2 {
-                line-height: 72px;
+                line-height: 72px !important;
                 font-size: 64px !important;
             }
 
@@ -81,10 +81,10 @@
 // Media query - screen sizes > 1025px and <=1200px
 @include media($desktop) {
     .videomenu-container {
-        .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
+        .nectar-slider-wrap[data-full-width="false"] .swiper-slide .content {
 
             h2 {
-                line-height: 72px;
+                line-height: 72px !important;
                 font-size: 64px !important;
             }
 
@@ -163,11 +163,12 @@
 
             .content {
                 padding: 0 !important;
-
+                top: 0 !important;
+                
                 h2 {
-                    margin-bottom: 0;
-                    margin-top: 75px;
                     line-height: 36px !important;
+                    margin-bottom: 0;
+                    margin-top: 50px;
                 }
                 p {
                     display: none;

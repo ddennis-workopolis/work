@@ -1,0 +1,85 @@
+.solutions-list-container {
+    .solutions-list-intro {
+        @include padding(null 85px null null);
+    }
+    .solutions-list-intro-title {
+        color: $color__text-heading;
+        font-size: 24px;
+        font-weight: $font__weight__bold;
+        line-height: 26px;
+        @include margin(null null 10px);
+    }
+
+    .solutions-list-intro-text, .solutions-list-element p, .button, a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .solutions-list-intro-text, .solutions-list-element p {
+        font-weight: $font__weight__light;
+    }
+
+    .solutions-list-element:first-child {
+        @include padding(null 25px null null);
+    }
+
+    .button {
+        color: $color__btn-primary-color;
+        height: 32px;
+        @include padding(0 null);
+        @include margin(null 20px null null);
+    }
+
+    a, a:visited {
+        color: $color__link-body !important;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+}
+
+
+// Media query - screen sizes > 1001px and < 1300px
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+    .solutions-list-container {
+        padding: 0 20px !important;
+        .solutions-list-element a {
+            display: block;
+            @include margin(20px null null)
+        }
+    }
+}
+
+// Media query - screen sizes >640px and < 690px
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    .solutions-list-container {
+        padding: 0 20px !important;
+        .solutions-list-intro {
+            @include padding(0);
+        }
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .solutions-list-container {
+        padding: 0 20px !important;
+        .solutions-list-intro {
+            @include padding(0);
+        }
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .solutions-list-container {
+        padding: 0 20px !important;
+        .solutions-list-intro {
+            @include padding(0);
+        }
+
+        .solutions-list-element a {
+            display: block;
+            @include margin(20px null null)
+        }
+    }
+}

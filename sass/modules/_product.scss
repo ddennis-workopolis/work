@@ -34,12 +34,14 @@
     }
 }
 
+// Media query - screen sizes < 1000px
 @media only screen and (max-width: 1000px) {
     .product-container {
         height: auto !important;
     }
 }
 
+// Media query - screen sizes >640px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .product-container {
         padding: 0 20px !important;

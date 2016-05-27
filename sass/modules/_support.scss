@@ -1,9 +1,11 @@
 // Apllied to full width background images with content within (in columns)
 .support-container {
+    background-blend-mode: overlay;
+    background-color: rgba($color__site-header-dark-bg, 0.5);
     height: 550px !important;
     .support-column {
         color: $color__text-heading-light;
-        @include pad(100px 100px 100px 0);
+        @include pad(100px 0px 100px 0);
     }
     .support-column-title {
         font-size: 48px;
@@ -43,6 +45,9 @@
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .support-container {
         padding: 0 20px !important;
+        .support-column {
+            @include padding(null 35px null null);
+        }
     }
 }
 
@@ -50,12 +55,20 @@
 @include media($mobile-lg) {
     .support-container {
         padding: 0 20px !important;
+        .support-column {
+            @include padding(null 35px null null);
+        }
     }
 }
 
 // Media query - screen sizes <380px
 @include media($mobile) {
     .support-container {
-        padding: 0 20px !important;
+        padding: 0 20px !important;.support-column {
+            @include padding(null 35px null null);
+        }
+        .support-column {
+            @include padding(null 35px null null);
+        }
     }
 }

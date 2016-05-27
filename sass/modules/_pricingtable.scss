@@ -131,7 +131,7 @@
                     li {
                         background-color: $color__text-heading;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                        color: $color__text-heading-light !important;
+                        color: rgba($color__text-heading-light, 0.7) !important;
                     }
                 }
             }
@@ -178,7 +178,8 @@
                     height: auto !important;
                     li {
                         background-color: $color__text-heading;
-                        color: $color__text-heading-light !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        color: rgba($color__text-heading-light, 0.7) !important;
                     }
                 }
             }
@@ -225,7 +226,8 @@
                     height: auto !important;
                     li {
                         background-color: $color__text-heading;
-                        color: $color__text-heading-light !important;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        color: rgba($color__text-heading-light, 0.7) !important;
                     }
                 }
             }
