@@ -104,6 +104,34 @@
             text-transform: none;
         }
     }
+
+    .pricing-duration {
+        color: $color__text-main;
+        font-size: 14px;
+        text-align: center;
+        @include margin(null null 50px);
+    }
+
+    .pricing-promotion {
+        text-align: center;
+
+        a {
+            color: $color__link-body;
+            font-weight: $font__weight__bold;
+        }
+
+        p {
+            font-weight: $font__weight__light;
+        }
+
+        p:first-child {
+            color: $color__text-heading;
+            font-size: 18px;
+            font-weight: $font__weight__bold;
+            line-height:24px;
+            @include padding(0);
+        }
+    }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 690px) {

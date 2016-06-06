@@ -1,0 +1,54 @@
+// Small modification to the description container
+#perks-posting {
+    margin-bottom: 0px !important;
+    padding-bottom: 100px !important;
+    padding-top: 100px !important;
+
+    .description-column {
+        background-color: $color_site-content-perks-item-bg;
+        color: $color__text-heading-light;
+        min-height: 215px;
+        @include padding(40px);
+    }
+
+    .description-column-title p {
+        color: $color__text-heading-light;
+        @include padding(0);
+    }
+}
+
+#power-posting {
+    margin-bottom: 0px !important;
+    padding-bottom: 100px !important;
+    padding-top: 100px !important;
+
+    .description-column {
+        background-color: $color_site-content-power-item-bg;
+        color: $color_site-content-power-item-text;
+        min-height: 300px;
+        @include padding(40px);
+    }
+
+    .description-column-title  {
+        p {
+            color: $color_site-content-power-item-text;
+            @include padding(0);
+        }
+    }
+
+    .description-column-text {
+        a {
+            color: $color__link-body;
+            font-weight: $font__weight__bold;
+        }
+    }
+}
+
+// Media query - screen sizes > 1000px
+@media only screen and (max-width: 1000px) {
+    #power-posting {
+        .description-column {
+            min-height: 100%;
+        }
+    }
+}

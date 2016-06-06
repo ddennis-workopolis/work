@@ -51,14 +51,11 @@ function salient_child_enqueue_styles() {
 
 /** Vendor styles and javascript - Odometer - dynamic counter **/
 function vendor_files() {
-    wp_enqueue_style( 'odometer-style', '/wp-content/themes/work/css/vendor/odometer-theme-car.css', array());
     wp_enqueue_style( 'flipclock-style', '/wp-content/themes/work/css/vendor/flipclock.css', array());
-    wp_register_script('odometer-script', '/wp-content/themes/work/js/vendor/odometer.min.js', array(), NULL, false);
     wp_register_script('flipclock-script', '/wp-content/themes/work/js/vendor/flipclock.min.js', array(), NULL, false);
     wp_register_script('flipclock-counter', '/wp-content/themes/work/js/vendor/counter.js', array(), NULL, false);
     wp_enqueue_script( 'flipclock-script');
     wp_enqueue_script( 'flipclock-counter');
-    wp_enqueue_script( 'odometer-script');
 }
 add_action('wp_enqueue_scripts', 'vendor_files');
 
@@ -141,6 +138,16 @@ function remove_custom_post_types() {
 	remove_action( 'init', 'portfolio');
 	remove_action( 'init', 'home_slider');
 }
+
+//Shortcode Processing
+if (!function_exists('nectar_shortcode_processing')) {
+	function nectar_shortcode_processing(){
+		require_once ( 'nectar/tinymce/shortcode-processing.php' );
+	}
+}
+
+
+add_action('init', 'nectar_shortcode_processing');
 
 function work_related_posts( $post_id = null ) {
     global $settings;

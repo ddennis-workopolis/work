@@ -1,7 +1,10 @@
 .solutions-list-container {
+
+    // .solutions-list-intro --> .solutions-list-intro-title / .solutions-list-intro-text
     .solutions-list-intro {
         @include padding(null 85px null null);
     }
+
     .solutions-list-intro-title {
         color: $color__text-heading;
         font-size: 24px;
@@ -19,6 +22,7 @@
         font-weight: $font__weight__light;
     }
 
+    // .solutions-list-element --> Individual elements on the RHS -->
     .solutions-list-element:first-child {
         @include padding(null 25px null null);
     }
@@ -49,7 +53,7 @@
     }
 }
 
-// Media query - screen sizes >640px and < 690px
+// Media query - screen sizes > 640px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .solutions-list-container {
         padding: 0 20px !important;

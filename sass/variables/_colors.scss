@@ -9,6 +9,7 @@ $color__black:					            #000000;
 
 $color__worko-green:			            #77be44;
 $color__worko-green-dark:		            #347E1B;
+$color__worko-green-standard:               #5aa323;
 $color__worko-orange:			            #ffa100;
 $color__worko-blue:			                #007ac9;
 $color__worko-gray-dark:		            #25282e;
@@ -44,6 +45,7 @@ $color__text-main:                          #6c7076;
 $color__text-main-secondary:                #96999f;
 $color__text-heading:                       $color__worko-gray-dark;
 $color__text-heading-light:                 $color__white;
+$color__text-heading-inactive:              #999fa9;
 
 $color__btn-default-color:                  $color__text-heading;
 $color__btn-default-bg:                     $color__gray-lighter;
@@ -90,3 +92,15 @@ $color__site-footer-text:                   rgba($color__white, 0.4);
 $color__site-footer-heading:                $color__white;
 $color__site-footer-link:                   rgba($color__white, 0.6);
 $color__site-footer-link-hover:             $color__brand-primary;
+
+$color_site-content-chat-bg:                $color__worko-green-standard;
+$color_site-content-chat-border:            $color__worko-gray-dark;
+$color_site-content-perks-item-bg:          $color__worko-gray-dark;
+$color_site-content-power-item-bg:          $color__white;
+$color_site-content-power-item-text:        $color__worko-gray-dark;
+$color_site-content-email-bg:               $color__worko-green-standard;
+$color_site-content-email-border:           $color__worko-gray-dark;
+$color_site-content-email-input-bg:         $color__white;
+$color_site-content-tags-attract:           $color__worko-green-standard; // Same theme variable used on Help & Support page
+$color_site-content-tags-develop:           $color__worko-blue; // Same theme variables used on Help & Support page
+$color_site-content-tags-retain:            $color__worko-gray-dark; // Same theme variables used on Help & Support page

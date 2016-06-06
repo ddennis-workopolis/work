@@ -1,9 +1,12 @@
-html, body, h1, h2, h3, h4, h5, h6, p, span {
+html, body, h1, h2, h3, h4, h5, h6, p, span, strong {
     font-family: $font__main !important;
 }
 
 .button {
     @include button-style($color__btn-primary-bg, $color__btn-default-color, transparent, true);
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // styling - Scroll down - On videomenu-container
@@ -21,6 +24,13 @@ body[data-button-style="rounded"] .section-down-arrow {
     list-style: none;
 }
 
+::-webkit-input-placeholder,
+          :-moz-placeholder,
+         ::-moz-placeholder,
+     :-ms-input-placeholder {
+            font-family: $font__main !important;
+}
+
 /*
     Adding a margin below every element. Home Page has
     a different layout.
@@ -30,7 +40,8 @@ body:not(.home) {
     .solutions-list-container,
     .description-container,
     .testimonials-container,
-    .support-container {
+    .support-container,
+    .blog-categories-container {
         margin-bottom: 100px !important;
     }
 }

@@ -25,6 +25,9 @@
         // Description text
         p {
             line-height: 24px;
+            margin: 0 auto;
+            max-width: 60%;
+            text-align: center;
             span {
                 font-weight: $font__weight__light;
                 line-height: 24px;
@@ -111,6 +114,16 @@
     }
 }
 
+// Needed on pages where videos are not used. Media query - screen sizes > 1000px
+@media only screen and (max-width: 1000px) {
+    .videomenu-container {
+        .image-bg {
+            background-blend-mode: overlay;
+            background-color: rgba($color__site-header-dark-bg, 0.5);
+        }
+    }
+}
+
 // Media query - screen sizes >640px and < 769px
 @include media($tablet) {
 
@@ -164,7 +177,7 @@
             .content {
                 padding: 0 !important;
                 top: 0 !important;
-                
+
                 h2 {
                     line-height: 36px !important;
                     margin-bottom: 0;

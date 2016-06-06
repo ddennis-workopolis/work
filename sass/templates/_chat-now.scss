@@ -1,0 +1,35 @@
+.chat-now {
+    background-color: $color_site-content-chat-bg;
+    border-top: 10px solid $color_site-content-chat-border;
+    color: $color__text-heading-light;
+    position: absolute;
+    top: 150px;
+    z-index: 11;
+    @include padding(40px);
+
+    .close {
+        background: url("/wordpress/wp-content/themes/work/images/close.png") no-repeat;
+        cursor: pointer;
+        height: 30px;
+        position: absolute;
+        right: 3px;
+        top: 15px;
+        width: 30px;
+    }
+
+    h3 {
+        color: $color__text-heading-light;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    p {
+        font-weight: $font__weight__light;
+    }
+
+    .button {
+        background-color: $color_site-content-chat-border;
+        color: $color__btn-primary-color;
+        @include padding(12px 30px);
+    }
+}

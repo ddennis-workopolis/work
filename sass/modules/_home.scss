@@ -14,6 +14,10 @@
 
     .clients-title {
         @include margin(null null $size__pad-sm);
+        p {
+            font-size: 14px;
+            font-weight: $font__weight__light;
+        }
     }
 
     .clients {
@@ -95,6 +99,10 @@
                         }
                     }
 
+                    a {
+                        color: $color__text-heading-inactive;
+                    }
+
                     a.active-tab:before {
                         color: $color__btn-primary-border;
                         display: block;
@@ -107,11 +115,11 @@
                     }
 
                     &:nth-of-type(1) a.active-tab:before {
-                        content: 'ENTREPRENEURS & STARTUPS';
+                        content: 'STARTUPS & SMALL BUSINESSES';
                     }
 
                     &:nth-of-type(2) a.active-tab:before {
-                        content: 'SMALL & MEDIUM BUSINESSES';
+                        content: 'MEDIUM SIZED BUSINESSES';
                     }
 
                     &:nth-of-type(3) a.active-tab:before {
@@ -119,7 +127,7 @@
                     }
 
                     &:nth-of-type(4) a.active-tab:before {
-                        content: 'ENTERPRISES';
+                        content: 'ENTERPRISE & BLUE CHIP';
                     }
 
                     a:hover:after, a.active-tab:after {
@@ -239,8 +247,10 @@
             margin-top: 8%;
 
             p {
+                color: $color__text-heading;
                 font-size: 22px !important;
                 line-height: 32px !important;
+                text-align: left;
             }
         }
 

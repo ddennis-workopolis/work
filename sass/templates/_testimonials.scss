@@ -3,12 +3,15 @@
     padding-top: 40px !important;
     padding-bottom: 20px !important;
     width: 100%;
+
+    // Testimonial - image
     .image-icon.has-bg {
         height: 80px;
         left: 0;
         position: absolute;
         width: 80px;
     }
+
     blockquote span, blockquote span.title {
         font-size: 14px !important;
         line-height: 20px !important;
@@ -16,15 +19,20 @@
         width: 20%;
         @include margin(null null null 100px);
     }
+
+    // Individual's name
     span:nth-of-type(1) {
         color: $color__text-main;
         font-weight: $font__weight__bold;
         @include margin(10px null null null);
     }
+
+    // Individual's position/title at the organization
     span.title {
         color: $color__text-main-secondary;
         font-weight: $font__weight__regular;
     }
+
     p {
         color: $color__text-main-secondary;
         font-size: 16px;
@@ -67,6 +75,7 @@
     }
 }
 
+// Media query - screen sizes > 640px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .testimonials-container {
         .testimonial_slider {

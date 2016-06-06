@@ -1,0 +1,177 @@
+// Because of the heading, the margin of -100px had to be removed from the .blog-categories-container and added to the title itself
+.home .blog-categories-container-title {
+    @include margin(-100px null null);
+    padding-top: 100px !important;
+    // Main title of the section
+    .section-title {
+        border-bottom: 0px !important;
+        padding: 0;
+        h2 {
+            margin: 0 auto;
+            text-align: center;
+            width: 60% !important;
+        }
+    }
+}
+
+// Margin not needed. Added to title.
+.home .blog-categories-container {
+    margin-top: 0px;
+    padding-top: 0px !important;
+}
+
+// Styling for customized posts filtered based on tags for attract, retain and develop.
+.blog-categories-container {
+    @include margin(-100px null null);
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+
+    .blog-categories {
+        background-color: $color__background-body;
+
+        & > .col {
+            display: flex;
+        }
+
+        &:nth-of-type(1) .tag-column{
+            background-color: $color_site-content-tags-attract;
+        }
+
+        &:nth-of-type(2) .tag-column{
+            background-color: $color_site-content-tags-develop;
+        }
+
+        &:nth-of-type(3) .tag-column{
+            background-color: $color_site-content-tags-retain;
+        }
+    }
+
+    .tag-column {
+        @include margin(null 2.1% null null);
+        @include padding(40px);
+
+        .tag-column-title, .tag-column-text {
+            color: $color__text-heading-light;
+        }
+
+        .tag-column-title {
+            font-size: 32px;
+            font-weight: $font__weight__bold;
+            line-height: 40px;
+            @include margin(null null 15px);
+        }
+
+        .tag-column-text {
+            font-size: 14px;
+            font-weight: $font__weight__light;
+        }
+    }
+
+    .tag-posts {
+        @include padding(25px 25px 25px 10px);
+
+        &:nth-of-type(2n) {
+            border-right: 1px solid #f3f3f3;
+            @include margin(null null null 0%);
+        }
+    }
+
+    .tag-title {
+        color: $color__text-heading;
+        font-size: 18px;
+        font-weight: $font__weight__bold;
+        line-height: 24px;
+        @include margin(null null 15px);
+    }
+    .title {
+        line-height: 20px;
+        @include margin(null null 15px);
+    }
+    .title a, .title a:hover{
+        color: $color__link-body;
+        font-size: 14px;
+    }
+}
+
+// Media query - screen sizes > 1000px
+@media only screen and (max-width: 1000px) {
+
+    // Because of the heading, the margin of -100px had to be removed from the .blog-categories-container and added to the title itself
+    .home .blog-categories-container-title.full-width-section {
+        margin-top: -100px !important;
+        padding-top: 100px !important;
+    }
+
+    // Margin not needed. Added to title.
+    .home .blog-categories-container.full-width-section {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+
+    .blog-categories-container {
+        &.full-width-section{
+            margin-top: -100px !important;
+        }
+        .blog-categories {
+            .col {
+                display: block;
+            }
+
+            .tag-column, .tag-posts {
+                width: 100%;
+            }
+
+            .tag-posts {
+                @include padding(25px 25px);
+                @include margin(0);
+            }
+        }
+    }
+}
+
+// Media query - screen sizes >640px and < 769px
+@include media($tablet) {
+    .blog-categories-container {
+        &.full-width-section{
+            margin-top: -100px !important;
+        }
+        .blog-categories .tag-column {
+            width: 100%;
+        }
+    }
+}
+
+// Media query - screen sizes > 640px and < 690px
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    .blog-categories-container {
+        .blog-categories .tag-column {
+            padding: 40px 20px;
+        }
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .blog-categories-container {
+        &.full-width-section{
+            margin-top: -100px !important;
+        }
+        .blog-categories .tag-column {
+            padding: 40px 20px;
+            width: 100%;
+        }
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .blog-categories-container {
+        &.full-width-section{
+            margin-top: -100px !important;
+        }
+        .blog-categories .tag-column {
+            padding: 40px 20px;
+            width: 100%;
+        }
+    }
+}

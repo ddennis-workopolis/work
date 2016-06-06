@@ -10,19 +10,6 @@
         }
     }
 
-    .odometer-container {
-        text-align: center;
-        width: 100%;
-    }
-
-    .odometer {
-        font-size: 50px;
-    }
-
-    .odometer-hide {
-        display: none;
-    }
-
     .description-text {
         @include margin(null null 50px);
         p {
@@ -35,6 +22,7 @@
         font-size: 16px;
         font-weight: $font__weight__light;
         @include margin(65px null null);
+        @include padding(0 20px);
         a, a:visited {
             color: $color__link-body;
             font-weight: $font__weight__bold;
@@ -119,6 +107,7 @@
     }
 }
 
+// Media query - screen sizes > 640px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .description-container {
         @include padding(0 20px);

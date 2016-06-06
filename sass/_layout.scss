@@ -6,6 +6,17 @@
 #header-outer {
     box-shadow: none;
 }
+
+.small-nav {
+    header#top {
+        #search-btn {
+            a span {
+                line-height: 30px !important;
+            }
+        }
+    }
+}
+
 header#top {
     nav {
         > ul > li.megamenu {
@@ -33,8 +44,6 @@ header#top {
             @include pad(13px 10px);
             margin-left: $size__pad-xs;
         }
-
-        #search-btn {}
     }
 }
 
