@@ -631,7 +631,7 @@ body:not(.home) .blog-categories-container {
       margin: 0 !important;
       width: auto !important; }
       #header-outer .mobile-buttons li .avatar {
-        background: url("/wordpress/wp-content/themes/work/images/avatar.png");
+        background: url("/wp-content/themes/work/images/avatar.png");
         height: 25px;
         width: 25px;
         display: inline-block;
@@ -794,7 +794,7 @@ body:not(.home) .blog-categories-container {
   height: 500px;
   padding: 40px 50px; }
   .home .solutions-container .solutions-tabs .tabbed div.ui-tabs-panel:nth-of-type(1), .home .solutions-container .toggles .tabbed div.ui-tabs-panel:nth-of-type(1) {
-    background-image: url("/wordpress/wp-content/themes/work/images/chef.png"); }
+    background-image: url("/wp-content/themes/work/images/chef.png"); }
 .home .solutions-container .solutions-tabs .tabbed .wpb_row, .home .solutions-container .toggles .tabbed .wpb_row {
   max-width: 980px;
   margin: 0 auto; }
@@ -902,7 +902,7 @@ body:not(.home) .blog-categories-container {
     line-height: 22px;
     position: absolute; }
   .home .posts-container .post-meta .comments:before {
-    content: url("/wordpress/wp-content/themes/work/images/comment.png");
+    content: url("/wp-content/themes/work/images/comment.png");
     padding: 0 4px; }
 .home .solutions-container .col.section-title, .home .posts-container .col.section-title {
   border: none;
@@ -1027,7 +1027,7 @@ body:not(.home) .blog-categories-container {
     margin-bottom: 30px;
     width: 100%; }
 .description-container .description-columns-four {
-  background-image: url("/wordpress/wp-content/themes/work/images/separator.png");
+  background-image: url("/wp-content/themes/work/images/separator.png");
   background-repeat: no-repeat;
   background-position: center 30%; }
   .description-container .description-columns-four img {
@@ -1080,7 +1080,7 @@ body:not(.home) .blog-categories-container {
     padding: 0 0 0 60px; }
     .product-container .product-column-feature p:before {
       content: '';
-      background-image: url("/wordpress/wp-content/themes/work/images/checkmark.png");
+      background-image: url("/wp-content/themes/work/images/checkmark.png");
       background-repeat: no-repeat;
       height: 40px;
       left: 0px;
@@ -1176,10 +1176,10 @@ body:not(.home) .blog-categories-container {
     font-weight: 700;
     margin-top: 10px; }
   .testimonials-container span.title {
-    color: #96999f;
+    color: #82858b;
     font-weight: 400; }
   .testimonials-container p {
-    color: #96999f;
+    color: #82858b;
     font-size: 16px;
     font-style: italic;
     float: right;
@@ -1577,7 +1577,7 @@ body:not(.home) .blog-categories-container {
     line-height: 22px;
     position: absolute; }
   .blog-posts-container .post-meta .comments:before {
-    content: url("/wordpress/wp-content/themes/work/images/comment.png");
+    content: url("/wp-content/themes/work/images/comment.png");
     padding: 0 4px; }
 
 .blog-posts-container .col.section-title {
@@ -1842,7 +1842,7 @@ body:not(.home) .blog-categories-container {
   z-index: 11;
   padding: 40px; }
   .chat-now .close {
-    background: url("/wordpress/wp-content/themes/work/images/close.png") no-repeat;
+    background: url("/wp-content/themes/work/images/close.png") no-repeat;
     cursor: pointer;
     height: 30px;
     position: absolute;

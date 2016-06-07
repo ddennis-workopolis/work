@@ -22,7 +22,7 @@
             @include pad(0 0 0 60px);
             &:before {
                 content: '';
-                background-image: url("/wordpress/wp-content/themes/work/images/checkmark.png");
+                background-image: url("/wp-content/themes/work/images/checkmark.png");
                 background-repeat: no-repeat;
                 height: 40px;
                 left: 0px;

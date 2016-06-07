@@ -23,9 +23,12 @@
             }, 2000);
         });
 
+        var customUrl = '127.0.0.1/wordpress/workopolis'; // Local environment
+        // var customUrl = 'hiring.wmdev.wpengine.com'; // Staging environment
+
         // Showing links for posts with tags containing 'attract'
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=attract',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=attract',
             data: {
                 filter: {
                     'posts_per_page': 4
@@ -51,7 +54,7 @@
         });
 
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=attract+whitepaper',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=attract+whitepaper',
             data: {
                 filter: {
                     'posts_per_page': 4
@@ -78,7 +81,7 @@
 
         // Showing links for posts with tags containing 'develop'
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=develop',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=develop',
             data: {
                 filter: {
                     'posts_per_page': 4
@@ -104,7 +107,7 @@
         });
 
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=develop+whitepaper',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=develop+whitepaper',
             data: {
                 filter: {
                     'posts_per_page': 4
@@ -131,7 +134,7 @@
 
         // Showing links for posts with tags containing 'retain'
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=retain',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=retain',
             data: {
                 filter: {
                     'posts_per_page': 4
@@ -157,7 +160,7 @@
         });
 
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=retain+whitepaper',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=retain+whitepaper',
             data: {
                 filter: {
                     'posts_per_page': 4
@@ -184,7 +187,7 @@
 
         // Sidebar filter for whitepapers, guides, ebooks
         $.ajax({
-            url: 'http://127.0.0.1/wordpress/workopolis/wp-json/wp/v2/posts/?filter[tag]=whitepaper,guides,ebooks',
+            url: 'http://' + customUrl + '/wp-json/wp/v2/posts/?filter[tag]=whitepaper,guides,ebooks',
             data: {
                 filter: {
                     'posts_per_page': 4

@@ -229,7 +229,7 @@
                     padding: 40px 50px;
 
                     &:nth-of-type(1) {
-                        background-image: url("/wordpress/wp-content/themes/work/images/chef.png");
+                        background-image: url("/wp-content/themes/work/images/chef.png");
                     }
                 }
 
@@ -414,7 +414,7 @@
                 }
 
                 &:before {
-                    content: url("/wordpress/wp-content/themes/work/images/comment.png");
+                    content: url("/wp-content/themes/work/images/comment.png");
                     @include padding(0 4px 0);
                 }
             }
