@@ -115,11 +115,6 @@
     .pricing-promotion {
         text-align: center;
 
-        a {
-            color: $color__link-body;
-            font-weight: $font__weight__bold;
-        }
-
         p {
             font-weight: $font__weight__light;
         }
@@ -130,6 +125,49 @@
             font-weight: $font__weight__bold;
             line-height:24px;
             @include padding(0);
+        }
+    }
+
+    // Table toggle to show additional prices
+    .toggles {
+        h3 {
+            max-width: 375px;
+            margin: 0 auto;
+        }
+        .toggle, .toggle.open {
+            a, a:hover {
+                background-color: $color__background-body !important;
+                color: $color__link-body !important;
+                font-family: $font__main;
+                line-height:24px !important;
+                font-size: 18px !important;
+                font-weight: $font__weight__bold;
+                text-align: center;
+                @include padding(0);
+
+                i {
+                    display: none;
+                }
+            }
+
+            & > div {
+                box-shadow: none;
+            }
+        }
+        thead {
+            th {
+                color: $color__text-heading;
+                font-size: 14px;
+            }
+        }
+        tbody {
+            td {
+                font-size: 14px;
+
+                &:last-child {
+                    text-align: center;
+                }
+            }
         }
     }
 }

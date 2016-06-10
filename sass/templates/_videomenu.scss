@@ -49,6 +49,9 @@
         a, a:visited {
             color: $color__btn-primary-color;
         }
+        a.primary-color {
+            background-color: $color__worko-green-standard !important;
+        }
         &:nth-of-type(2) {
             display: none;
         }

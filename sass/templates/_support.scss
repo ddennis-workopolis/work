@@ -21,13 +21,13 @@
     .button {
         display: inline-block;
         &:first-child {
-            background-color: $color__btn-default-border;
+            background-color: $color__btn-primary-color;
+            color: $color__btn-secondary-color;
             @include margin(null 25px null null);
         }
         &:last-child {
             background-color: $color__btn-secondary-bg;
             border-color: $color__btn-default-border;
-            color: $color__btn-primary-color;
         }
     }
     .highlight {

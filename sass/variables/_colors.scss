@@ -17,7 +17,7 @@ $color__worko-teal:			                #00b8b0;
 $color__worko-purple:			            #870057;
 $color__worko-magenta:                      #a70240;
 
-$color__brand-primary:                      $color__worko-green;
+$color__brand-primary:                      $color__worko-green-standard;
 $color__brand-secondary:                    $color__worko-blue;
 
 $color__twitter-blue:                       #00ACED;
@@ -47,7 +47,7 @@ $color__text-heading:                       $color__worko-gray-dark;
 $color__text-heading-light:                 $color__white;
 $color__text-heading-inactive:              #999fa9;
 
-$color__btn-default-color:                  $color__text-heading;
+$color__btn-default-color:                  $color__text-heading-light;
 $color__btn-default-bg:                     $color__gray-lighter;
 $color__btn-default-bg-hover:               darken($color__btn-default-bg, 10%);
 $color__btn-default-bg-focus:               darken($color__btn-default-bg-hover, 10%);
@@ -55,10 +55,11 @@ $color__btn-default-border:                 $color__btn-default-bg;
 $color__btn-default-border-hover:           $color__btn-default-bg-hover;
 $color__btn-default-border-focus:           $color__btn-default-bg-focus;
 
-$color__btn-primary-bg:                     $color__worko-green;
+$color__btn-primary-bg:                     $color__worko-green-standard;
 $color__btn-secondary-bg:                   $color__worko-blue;
 $color__btn-primary-border:                 $color__btn-primary-bg;
 $color__btn-primary-color:                  $color__white;
+$color__btn-secondary-color:                $color__worko-gray-dark;
 $color__btn-blog-category-even-bg:          $color__worko-magenta;
 $color__btn-blog-category-odd-bg:           $color__worko-blue;
 
@@ -89,6 +90,7 @@ $color__site-header-dropdown-link-hover:    $color__white;
 
 $color__site-footer-bg:                     $color__worko-gray-dark;
 $color__site-footer-text:                   rgba($color__white, 0.4);
+$color__site-footer-newsletter-text:        #92969c;
 $color__site-footer-heading:                $color__white;
 $color__site-footer-link:                   rgba($color__white, 0.6);
 $color__site-footer-link-hover:             $color__brand-primary;

@@ -145,9 +145,23 @@
     }
 
     #slide-out-widget-area.fullscreen {
-        .inner .widget.widget_nav_menu {
-            li a {
-                font-size: 48px;
+
+        .inner {
+
+            .off-canvas-menu-container {
+                li a {
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+            }
+
+            .widget.widget_nav_menu {
+                h4 {
+                    display: none;
+                }
+                li a {
+                    font-size: 48px;
+                }
             }
         }
     }

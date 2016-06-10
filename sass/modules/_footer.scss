@@ -1,0 +1,50 @@
+#footer-outer {
+    input[type="text"], input[type="email"] {
+        font-family: $font__main;
+        font-weight: $font__weight__light;
+        font-size: 14px;
+    }
+    .button {
+        background-color: $color__btn-primary-bg;
+        @include margin(15px null null);
+    }
+}
+
+// Media query - screen sizes >640px and <=690px
+@media only screen and (min-width: 641px) and (max-width: 690px) {
+    #footer-outer  {
+        .container {
+            max-width: 100% !important;
+            padding: 0 20px;
+        }
+        input[type="text"], input[type="email"] {
+            max-width: 50%;
+        }
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    #footer-outer  {
+        .container {
+            max-width: 100% !important;
+            padding: 0 20px;
+        }
+        input[type="text"], input[type="email"] {
+            max-width: 50%;
+        }
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    #footer-outer  {
+        .container {
+            max-width: 100% !important;
+            padding: 0 20px;
+        }
+        input[type="text"], input[type="email"] {
+            max-width: 100%;
+        }
+    }
+}

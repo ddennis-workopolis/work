@@ -1,9 +1,15 @@
+.home {
+    .chat-now {
+        top: 150px;
+    }
+}
+
 .chat-now {
     background-color: $color_site-content-chat-bg;
     border-top: 10px solid $color_site-content-chat-border;
     color: $color__text-heading-light;
     position: absolute;
-    top: 150px;
+    top: -500px;
     z-index: 11;
     @include padding(40px);
 
@@ -31,5 +37,26 @@
         background-color: $color_site-content-chat-border;
         color: $color__btn-primary-color;
         @include padding(12px 30px);
+    }
+}
+
+// Media query - screen sizes >640px and < 769px
+@include media($tablet) {
+    .chat-now {
+        display: none;
+    }
+}
+
+// Media query - screen sizes >380px and < 641px
+@include media($mobile-lg) {
+    .chat-now {
+        display: none;
+    }
+}
+
+// Media query - screen sizes <380px
+@include media($mobile) {
+    .chat-now {
+        display: none;
     }
 }

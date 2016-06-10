@@ -2,14 +2,23 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, strong {
     font-family: $font__main !important;
 }
 
+/*
+    Button styling - used throughout the site
+*/
 .button {
-    @include button-style($color__btn-primary-bg, $color__btn-default-color, transparent, true);
+    @include button-style($color__worko-green-standard, $color__btn-default-color, transparent, true);
     &:hover {
         cursor: pointer;
     }
+
+    a {
+        background-color: $color__worko-green-standard !important;
+    }
 }
 
-// styling - Scroll down - On videomenu-container
+/*
+    Styling - Scroll down - On videomenu-container
+*/
 body[data-button-style="rounded"] .section-down-arrow {
     border: none;
     opacity: 1;
