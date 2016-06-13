@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Work
 Theme URI: http://themes.davedennis.me/work
@@ -1022,6 +1023,15 @@ body:not(.home) .blog-categories-container {
       width: 100% !important; }
     .home .posts-container .posts-container-content article {
       width: 100% !important; } }
+
+html:lang(fr-FR) .solutions-container .solutions-tabs li:nth-of-type(1) a.active-tab:before {
+  content: 'ENTREPRISES EN D├ëMARRAGE ET PETITES ENTREPRISES'; }
+html:lang(fr-FR) .solutions-container .solutions-tabs li:nth-of-type(2) a.active-tab:before {
+  content: 'MOYENNES ENTREPRISES'; }
+html:lang(fr-FR) .solutions-container .solutions-tabs li:nth-of-type(3) a.active-tab:before {
+  content: 'GRANDES ENTREPRISES'; }
+html:lang(fr-FR) .solutions-container .solutions-tabs li:nth-of-type(4) a.active-tab:before {
+  content: 'MULTINATIONALES ET SOCI├ëT├ëS DE PRESTIGE'; }
 
 .description-container .col.section-title {
   border-bottom: 0;

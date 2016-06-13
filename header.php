@@ -227,7 +227,7 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false') { ?> <div id="
 						</ul>
 						<ul class="buttons-top" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
 							<li id="support-btn"><div><a href="/wordpress/workopolis/help-support/"><?php _e('Help & Support',THEME_NAME); ?></a></div> </li>
-							<li id="lang-btn"><div><a href="#"><?php _e('Francais',THEME_NAME); ?></a></div> </li>
+							<li id="lang-btn"><div><a href="#"><?php _e('Français',THEME_NAME); ?></a></div> </li>
 							<li id="seekers-btn"><div><a href="#"><?php _e('Job Seekers',THEME_NAME); ?></a></div> </li>
 						</ul>
 						<ul class="sf-menu">
