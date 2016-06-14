@@ -502,6 +502,12 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, strong {
 /*
     Button styling - used throughout the site
 */
+.buttons .button {
+  padding: 0; }
+  .buttons .button a:hover {
+    background-color: #2c4f11 !important;
+    color: #FFFFFF; }
+
 .button {
   font-size: 16px;
   font-size: 1rem;
@@ -1158,7 +1164,7 @@ html:lang(fr-FR) .solutions-container .solutions-tabs li:nth-of-type(4) a.active
 .support-container {
   background-blend-mode: overlay;
   background-color: rgba(37, 40, 46, 0.5);
-  height: 550px !important; }
+  min-height: 550px !important; }
   .support-container .support-column {
     color: #FFFFFF;
     padding: 100px 0px 100px 0; }
@@ -1448,11 +1454,12 @@ html:lang(fr-FR) .solutions-container .solutions-tabs li:nth-of-type(4) a.active
   font-weight: 300; }
 .solutions-list-container .solutions-list-element:first-child {
   padding-right: 25px; }
-.solutions-list-container .button {
-  color: #FFFFFF;
+.solutions-list-container a.button {
+  color: #FFFFFF !important;
   height: 32px;
-  padding-top: 0;
-  padding-bottom: 0;
+  text-decoration: none;
+  padding-top: 8.5px;
+  padding-bottom: 8.5px;
   margin-right: 20px; }
 .solutions-list-container a, .solutions-list-container a:visited {
   color: #007ac9 !important;

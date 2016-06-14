@@ -2,7 +2,7 @@
 .support-container {
     background-blend-mode: overlay;
     background-color: rgba($color__site-header-dark-bg, 0.5);
-    height: 550px !important;
+    min-height: 550px !important;
     .support-column {
         color: $color__text-heading-light;
         @include pad(100px 0px 100px 0);

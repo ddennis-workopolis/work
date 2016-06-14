@@ -5,6 +5,16 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, strong {
 /*
     Button styling - used throughout the site
 */
+
+.buttons .button {
+    @include padding(0);
+    a {
+        &:hover {
+            background-color: $color__link-hover !important;
+            color: $color__btn-default-color;
+        }
+    }
+}
 .button {
     @include button-style($color__worko-green-standard, $color__btn-default-color, transparent, true);
     &:hover {

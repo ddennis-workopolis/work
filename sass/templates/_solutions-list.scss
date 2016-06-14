@@ -27,10 +27,11 @@
         @include padding(null 25px null null);
     }
 
-    .button {
-        color: $color__btn-primary-color;
+    a.button {
+        color: $color__btn-primary-color !important;
         height: 32px;
-        @include padding(0 null);
+        text-decoration: none;
+        @include padding(8.5px null);
         @include margin(null 20px null null);
     }
 
