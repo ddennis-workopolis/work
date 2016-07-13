@@ -2,6 +2,7 @@
     float: right !important;
     @include padding(0 0 0 20px);
 
+    // Applicable to all the headings in the sidebar - cannot be changed to white
     h4, #sidebar h4 {
         color: $color__text-heading;
         font-size: 18px;
@@ -16,19 +17,21 @@
         color: $color__link-body !important;
         font-size: 14px;
     }
+}
 
+.newsletter-form {
     form {
         background-color: $color_site-content-email-bg;
         border-top: 9px solid $color_site-content-email-border;
         @include margin(null null 30px);
         @include padding(30px);
 
-        h4, p {
-            color: $color__text-heading-light;
+        h4, p, a, a:hover, a:visited{
+            color: $color__text-heading-light !important;
         }
 
         h4 {
-            font-size: 24px;
+            font-size: 24px !important;
         }
 
         p {
@@ -36,6 +39,11 @@
             font-weight: $font__weight__light;
             line-height: 22px;
             @include padding(null null 20px);
+        }
+
+        a {
+            display: block;
+            font-size: 12px;
         }
 
         input[type="text"], input[type="email"] {
@@ -48,8 +56,18 @@
             @include margin(0);
         }
 
-        input[type="text"] {
-            border-bottom: 1px solid $color__border-input !important;
+        table {
+            background-color: $color_site-content-email-bg !important;
+
+            tr:nth-of-type(2) {
+                border-top: 1px solid $color__border-input;
+            }
+
+            td {
+                background-color: $color_site-content-email-bg !important;
+                border: none !important;
+                padding: 0 !important;
+            }
         }
 
         .button {
@@ -58,6 +76,25 @@
     }
 }
 
+#sidebar .newsletter-info {
+    a, a:hover, a:visited {
+        color: $color__text-heading-light !important;
+        font-size: 12px !important;
+    }
+}
+
+// Over-riding the title with a custom one on all pages contaning the widget
+.widget_categories {
+    h4 {
+        display: none;
+    }
+
+    ul {
+        margin-top: -50px;
+    }
+}
+
+// Media query - screen sizes <= 1000px
 @media only screen and (max-width: 1000px) {
     .posts-container-sidebar {
         @include padding(0);

@@ -1,14 +1,37 @@
-html, body, h1, h2, h3, h4, h5, h6, p, span, strong {
-    font-family: $font__main !important;
+html, body, p, a, span {
+    @include font-gotham;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    @include font-gotham-bold;
 }
 
 /*
     Button styling - used throughout the site
 */
+body a:visited, body.ascend a:visited {
+    color: $color__link;
+}
+
+.buttons .button {
+    @include padding(0);
+    @include font-gotham;
+    a {
+        &:hover {
+            background-color: $color__link-hover !important;
+            color: $color__btn-default-color;
+        }
+    }
+}
+
 .button {
     @include button-style($color__worko-green-standard, $color__btn-default-color, transparent, true);
     &:hover {
         cursor: pointer;
+    }
+
+    &:visited {
+        color: $color__btn-default-color !important;
     }
 
     a {
@@ -51,7 +74,7 @@ body:not(.home) {
     .testimonials-container,
     .support-container,
     .blog-categories-container {
-        margin-bottom: 100px !important;
+        margin-bottom: 120px !important;
     }
 }
 

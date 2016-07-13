@@ -22,7 +22,7 @@
 
 // Styling for customized posts filtered based on tags for attract, retain and develop.
 .blog-categories-container {
-    @include margin(-100px null null);
+    @include margin(-120px null null);
     padding-top: 100px !important;
     padding-bottom: 100px !important;
 
@@ -87,7 +87,7 @@
         line-height: 20px;
         @include margin(null null 15px);
     }
-    .title a, .title a:hover{
+    .title a, .title a:hover, .title a:visited {
         color: $color__link-body;
         font-size: 14px;
     }
@@ -98,7 +98,7 @@
 
     // Because of the heading, the margin of -100px had to be removed from the .blog-categories-container and added to the title itself
     .home .blog-categories-container-title.full-width-section {
-        margin-top: -100px !important;
+        margin-top: -120px !important;
         padding-top: 100px !important;
     }
 
@@ -133,7 +133,7 @@
 @include media($tablet) {
     .blog-categories-container {
         &.full-width-section{
-            margin-top: -100px !important;
+            margin-top: -120px !important;
         }
         .blog-categories .tag-column {
             width: 100%;
@@ -154,7 +154,7 @@
 @include media($mobile-lg) {
     .blog-categories-container {
         &.full-width-section{
-            margin-top: -100px !important;
+            margin-top: -120px !important;
         }
         .blog-categories .tag-column {
             padding: 40px 20px;
@@ -167,7 +167,7 @@
 @include media($mobile) {
     .blog-categories-container {
         &.full-width-section{
-            margin-top: -100px !important;
+            margin-top: -120px !important;
         }
         .blog-categories .tag-column {
             padding: 40px 20px;

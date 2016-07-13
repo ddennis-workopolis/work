@@ -33,6 +33,10 @@
     margin-left: 35px;
 }
 
+html:lang(fr-FR) .flip-clock-wrapper ul:nth-child(3n):before, html:lang(fr-CA) .flip-clock-wrapper ul:nth-child(3n):before {
+    content: '';
+}
+
 .flip-clock-wrapper ul:nth-child(3n):before {
     color: black;
     content:',';

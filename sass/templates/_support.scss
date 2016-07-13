@@ -1,8 +1,8 @@
-// Apllied to full width background images with content within (in columns)
+// Applied to full width background images with content within (in columns)
 .support-container {
     background-blend-mode: overlay;
     background-color: rgba($color__site-header-dark-bg, 0.5);
-    height: 550px !important;
+    min-height: 550px !important;
     .support-column {
         color: $color__text-heading-light;
         @include pad(100px 0px 100px 0);
@@ -22,11 +22,12 @@
         display: inline-block;
         &:first-child {
             background-color: $color__btn-primary-color;
-            color: $color__btn-secondary-color;
-            @include margin(null 25px null null);
+            color: $color__btn-secondary-color !important;
+            @include margin(null 25px 25px null);
         }
         &:last-child {
             background-color: $color__btn-secondary-bg;
+            color: $color__btn-default-color !important;
             border-color: $color__btn-default-border;
         }
     }
@@ -36,12 +37,14 @@
     }
 }
 
+// Media query - screen sizes <= 1000px
 @media only screen and (max-width: 1000px) {
     .support-container {
         height: auto !important;
     }
 }
 
+// Media query - screen sizes >641px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .support-container {
         padding: 0 20px !important;

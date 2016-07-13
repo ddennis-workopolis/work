@@ -5,37 +5,131 @@
 
 .buttons-top {
     transition: top 0.8s ease !important;
-    li {
+    & > li {
         position: absolute;
-        top: -20px !important;
+        top: -19px !important;
         a {
-            font-size: 12px;
-            width: 100px !important;
             @include margin(null 10px null);
+            font-size: 12px;
+            font-weight: $font__weight__regularbold;
+            width: auto !important;
         }
 
         &:first-child {
             right: 17%;
         }
         &:nth-of-type(2n) {
+            margin-top: -12px;
             right: 9%;
         }
         &:nth-of-type(3n) {
             right: 0;
         }
     }
+
+    #lang-btn {
+        height: 30px;
+        .lang_sel_list_vertical {
+            width: 100px;
+            ul, a, a:visited {
+                border: none;
+            }
+            li {
+                width: auto;
+            }
+            a {
+                background-color: $color__site-header-link-bg;
+                font-size: 12px;
+                font-family: $font__main;
+                line-height: 22px;
+
+                &:hover {
+                    background-color: $color__site-header-link-bg;
+                }
+            }
+        }
+    }
 }
 
-#header-outer.small-nav {
-    .buttons-top {
+#header-secondary-outer {
+    background-color: $color__site-header-system-messages;
+    .container {
+        max-width: 100%;
+    }
+    nav ul {
+        height: auto;
+        padding: 10px;
+        width: 100%;
         li {
-            top: -12px !important;
+            color: $color__text-heading-light;
+            font-size: 14px !important;
+            font-weight: $font__weight__regular;
+            line-height: 16px !important;
+            div {
+                display: inline-block;
+                width: calc(100% - 90px);
+            }
+            a:not(.system-messages-close) {
+                display: none;
+            }
+            .system-messages-close, a:hover {
+                border: 1px solid $color__btn-default-border;
+                color: $color__text-heading-light;
+                display: block;
+                font-size: 12px !important;
+                float: right;
+                margin: 0 10px;
+                padding: 2px 10px !important;
+            }
+        }
+    }
+}
+
+#header-outer {
+
+    // Specific styling for lang-btn when the header isn't set to transparent and the user has not scrolled
+    &:not(.transparent) {
+        #lang-btn {
+            a {
+                color: #888 !important;
+            }
+        }
+    }
+
+    // All the header text is white against the transparent header background
+    &.transparent {
+        a {
+            color: $color__site-header-light-bg !important;
+        }
+
+        .sf-menu {
+            a {
+                color: $color__site-header-link !important;
+            }
+        }
+    }
+
+    // Header styling - when the user has scrolled/is scrolling
+    &.small-nav {
+        header#top {
+            border-top: 1px solid $color__background-hr;
+        }
+        .buttons-top {
+            li {
+                top: -12px !important;
+            }
+
+            #lang-btn {
+                margin-top: 0px;
+                .lang_sel_list_vertical a {
+                    color: #888 !important;
+                }
+            }
         }
     }
 }
 
 #header-outer[data-lhe="animated_underline"] header#top {
-    border-top: 1px solid $color__background-hr;
 
     nav {
         ul.buttons li {
@@ -52,6 +146,17 @@
     }
 }
 
+header#top .sf-menu li ul li a {
+    background: $color__site-header-bg !important;
+    color: $color__site-header-link;
+    font-weight: $font__weight__regularbold;
+
+    &:hover {
+        background: $color__site-header-bg !important;
+        color: $color__site-header-link-hover;
+    }
+}
+
 #slide-out-widget-area.fullscreen {
     .inner .widget {
         @include pad(0);
@@ -60,6 +165,14 @@
 
 // Media query - screen sizes >1px and < 1000px
 @media screen and (min-width:1px) and (max-width:1000px) {
+    #header-secondary-outer {
+        nav ul li {
+            div {
+                max-width: 90%;
+                text-align: left;
+            }
+        }
+    }
 
     #header-outer {
         header#top {
@@ -114,7 +227,8 @@
                     margin: 0 0 0 10px!important;
                 }
                 &#search-btn {
-                    display: inline-block !important;
+                    display: none !important;
+                    // display: inline-block !important; Not to be shown for Phase 1 implementation
 
                     .icon-salient-search {
                         background-color: $color__site-header-bg;
@@ -162,6 +276,29 @@
                 li a {
                     font-size: 48px;
                 }
+
+                .sub-menu {
+                    li a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:690px) {
+    #header-secondary-outer {
+        .container {
+            max-width: 690px !important;
+            width: 100%;
+            .sf-menu {
+                border-top: none;
+            }
+
+            .system-messages-close {
+                border: 1px solid $color__btn-default-border !important;
+                padding: 2px 10px;
             }
         }
     }

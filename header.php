@@ -24,8 +24,30 @@
 
 <title> <?php wp_title("|",true, 'right'); ?> <?php if (!defined('WPSEO_VERSION')) { bloginfo('name'); } ?></title>
 
+<!-- Custom Meta Tags - Analytics -->
+<?php $post_id = get_post($post->post_parent);
+$parentpagetitle = $post_id->post_title;
+?>
+<meta name="Section" content="Employer"/>
+<meta name="Site Sub-Section" content="<?php echo $parentpagetitle; ?>"/>
+<meta name="Site Page Type" content="<?php { the_title_attribute(); } ?>"/>
+<meta name="PageName" content=""/>
+<!-- End Custom Meta Tags - Analytics -->
+
 <?php wp_head(); ?>
 
+<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7721754/804146/css/fonts.css" />
+
+<script>
+
+if (document.cookie.indexOf("fonts-loaded") >= 0) {
+    document.documentElement.className += " fonts-loaded";
+    console.log('you should have our fonts cached');
+}
+</script>
+
+<!-- DTM Header -->
+<script src="//assets.adobedtm.com/3eb93ccce7aef55f5c3c3e752af376ca36eaa106/satelliteLib-564f4832908791ece9846380866c8c6381ff1a04.js"></script>
 </head>
 
 <?php
@@ -94,6 +116,16 @@ $prependTopNavMobile = (!empty($options['header-slide-out-widget-area-top-nav-in
 ?>
 
 <body <?php body_class(); ?> data-footer-reveal="<?php echo $footer_reveal; ?>" data-footer-reveal-shadow="<?php echo $footer_reveal_shadow; ?>" data-cae="<?php echo $column_animation_easing; ?>" data-cad="<?php echo $column_animation_duration; ?>" data-aie="<?php echo $animate_in_effect; ?>" data-ls="<?php echo $lightbox_script;?>" data-apte="<?php echo $page_transition_effect;?>" data-hhun="<?php echo $hideHeaderUntilNeeded; ?>" data-fancy-form-rcs="<?php echo $fancy_rcs; ?>" data-form-style="<?php echo $form_style; ?>" data-is="<?php echo $icon_style; ?>" data-button-style="<?php echo $button_styling; ?>" data-header-inherit-rc="<?php echo (!empty($options['header-inherit-row-color']) && $options['header-inherit-row-color'] == '1' && $perm_trans != 1) ? "true" : "false"; ?>" data-header-search="<?php echo $headerSearch; ?>" data-animated-anchors="<?php echo (!empty($options['one-page-scrolling']) && $options['one-page-scrolling'] == '1') ? 'true' : 'false'; ?>" data-ajax-transitions="<?php echo (!empty($options['ajax-page-loading']) && $options['ajax-page-loading'] == '1') ? 'true' : 'false'; ?>" data-full-width-header="<?php echo $fullWidthHeader; ?>" data-slide-out-widget-area="<?php echo ($sideWidgetArea == '1') ? 'true' : 'false';  ?>" data-loading-animation="<?php echo (!empty($options['loading-image-animation'])) ? $options['loading-image-animation'] : 'none'; ?>" data-bg-header="<?php echo $bg_header; ?>" data-ext-responsive="<?php echo (!empty($options['responsive']) && $options['responsive'] == 1 && !empty($options['ext_responsive']) && $options['ext_responsive'] == '1') ? 'true' : 'false'; ?>" data-header-resize="<?php echo $headerResize; ?>" data-header-color="<?php echo (!empty($options['header-color'])) ? $options['header-color'] : 'light' ; ?>" <?php echo (!empty($options['transparent-header']) && $options['transparent-header'] == '1') ? null : 'data-transparent-header="false"'; ?> data-smooth-scrolling="<?php echo $options['smooth-scrolling']; ?>" data-permanent-transparent="<?php echo $perm_trans; ?>" data-responsive="<?php echo (!empty($options['responsive']) && $options['responsive'] == 1) ? '1'  : '0' ?>" >
+
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T38FSW"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-T38FSW');</script>
+	<!-- End Google Tag Manager -->
 
 <?php if(!empty($options['google-analytics'])) echo $options['google-analytics']; ?>
 
@@ -209,14 +241,14 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false') { ?> <div id="
 
 					<nav class="mobile-nav">
 						<ul class="mobile-buttons" data-user-set-ocm="">
-							<li id="signin-btn"><div><a href="#"><span class="avatar"></span><?php _e('',THEME_NAME); ?></a></div> </li>
+							<li id="signin-btn"><div><a href="https://www.workopolis.com/account/en/recruiter-login"><span class="avatar"></span><?php _e('',THEME_NAME); ?></a></div> </li>
 							<li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span></a></div> </li>
 						</ul>
 					</nav>
 					<nav>
-						<ul class="buttons" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
-							<li id="register-btn"><div><a href="#"><?php _e('Register',THEME_NAME); ?></a></div> </li>
-							<li id="signin-btn"><div><a href="#"><?php _e('Sign in',THEME_NAME); ?></a></div> </li>
+						<ul class="buttons en" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
+							<li id="register-btn"><div><a href="https://www.workopolis.com/account/recruiter-registration"><?php _e('Register',THEME_NAME); ?></a></div> </li>
+							<li id="signin-btn"><div><a href="https://www.workopolis.com/account/en/recruiter-login"><?php _e('Sign in',THEME_NAME); ?></a></div> </li>
                             <li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span> </a></div> </li>
 
 							<?php if($sideWidgetArea == '1') { ?>
@@ -225,10 +257,31 @@ if($perm_trans != 1 || $perm_trans == 1 && $bg_header == 'false') { ?> <div id="
        							</li>
 							<?php } ?>
 						</ul>
-						<ul class="buttons-top" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
-							<li id="support-btn"><div><a href="/wordpress/workopolis/help-support/"><?php _e('Help & Support',THEME_NAME); ?></a></div> </li>
-							<li id="lang-btn"><div><a href="#"><?php _e('Français',THEME_NAME); ?></a></div> </li>
-							<li id="seekers-btn"><div><a href="#"><?php _e('Job Seekers',THEME_NAME); ?></a></div> </li>
+
+						<!-- French Buttons -->
+						<ul class="buttons fr" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
+							<li id="register-btn"><div><a href="https://www.workopolis.com/account/inscription-pour-employeur"><?php _e('Inscription',THEME_NAME); ?></a></div> </li>
+							<li id="signin-btn"><div><a href="https://www.workopolis.com/account/fr/recruteur-ouvrir-session"><?php _e('Ouverture de session',THEME_NAME); ?></a></div> </li>
+                            <li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span> </a></div> </li>
+
+							<?php if($sideWidgetArea == '1') { ?>
+								<li class="slide-out-widget-area-toggle">
+									<div> <a href="#sidewidgetarea" class="closed"> <span> <i class="lines-button x2"> <i class="lines"></i> </i> </span> </a> </div>
+       							</li>
+							<?php } ?>
+						</ul>
+
+						<ul class="buttons-top en" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
+							<li id="support-btn"><div><a href="/resources-2/help-support/"><?php _e('Help & Support',THEME_NAME); ?></a></div> </li>
+							<li id="lang-btn"> <?php do_action('wpml_add_language_selector'); ?> </li>
+							<li id="seekers-btn"><div><a href="http://www.workopolis.com/shared/en/home/index"><?php _e('Job Seekers',THEME_NAME); ?></a></div> </li>
+						</ul>
+
+						<!-- French menu - buttons top -->
+						<ul class="buttons-top fr" data-user-set-ocm="<?php echo $userSetSideWidgetArea; ?>">
+							<li id="support-btn"><div><a href="/fr/resources/aide-et-soutien/"><?php _e('Aide et soutien',THEME_NAME); ?></a></div> </li>
+							<li id="lang-btn"> <?php do_action('wpml_add_language_selector'); ?> </li>
+							<li id="seekers-btn"><div><a href="http://www.workopolis.com/shared/fr/home/index"><?php _e('Candidats',THEME_NAME); ?></a></div> </li>
 						</ul>
 						<ul class="sf-menu">
 							<?php

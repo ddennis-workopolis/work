@@ -22,7 +22,7 @@
     }
 
     // Blog articles and meta content (likes etc.)
-    .masonry-blog-item .article-content-wrap, .post-meta {
+    .masonry-blog-item div.article-content-wrap, .masonry-blog-item .post-meta {
         padding: 0 0 20px !important;
 
         // Blog post title
@@ -49,26 +49,27 @@
             top: 15px;
             left: 15px;
             a {
-                font-size: 12px;
+                border-radius: 80px;
+                display: inline-block;
+                font-size: 11px;
                 font-weight: $font__weight__semibold;
                 line-height: 20px;
-                padding: 5px 10px;
-                border-radius: 80px;
+                @include margin(0 2px 5px);
+                @include padding(2px 16px);
             }
         }
 
-        &:nth-of-type(even) {
-            .content-inner .meta-category a {
-                background-color: $color__btn-blog-category-even-bg;
-                color: $color__btn-primary-color;
-            }
-        }
+        // &:nth-of-type(even) {
+        //     .content-inner .meta-category a {
+        //         background-color: $color__btn-blog-category-even-bg;
+        //         color: $color__btn-primary-color;
+        //     }
+        // }
 
-        &:nth-of-type(odd) {
-            .content-inner .meta-category a {
-                background-color: $color__btn-blog-category-odd-bg;
-                color: $color__btn-primary-color;
-            }
+        .content-inner .meta-category a {
+            display: none; // Temporarily removed from the blog posts list - may or may not be shown in the future
+            background-color: $color__btn-blog-category-odd-bg;
+            color: $color__btn-primary-color;
         }
     }
     // Category - appears on image

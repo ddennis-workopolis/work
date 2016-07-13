@@ -51,18 +51,22 @@ function salient_child_enqueue_styles() {
 
 /** Enqueue custom javascript files **/
 function custom_work_js() {
-    wp_register_script('main_work', '/wp-content/themes/work/js/main_work.js', array('jquery'), NULL, false);
+    wp_register_script('fontfaceobserver', '/wp-content/themes/work/js/vendor/fontfaceobserver.js', array('jquery'), NULL, true);
+    wp_register_script('fontfaceobserver-standalone', '/wp-content/themes/work/js/vendor/fontfaceobserver.standalone.js', array('jquery'), NULL, true);
+    wp_register_script('main_work', '/wp-content/themes/work/js/main_work.js', array('jquery'), NULL, true);
+    wp_enqueue_script( 'fontfaceobserver' );
+    wp_enqueue_script( 'fontfaceobserver-standalone' );
     wp_enqueue_script( 'main_work' );
 }
 add_action('wp_enqueue_scripts', 'custom_work_js');
 
-/** Vendor styles and javascript - Odometer - dynamic counter **/
+/** Vendor styles and javascript - dynamic counter **/
 function vendor_files() {
     wp_enqueue_style( 'flipclock-style', '/wp-content/themes/work/css/vendor/flipclock.css', array());
-    wp_register_script('flipclock-script', '/wp-content/themes/work/js/vendor/flipclock.min.js', array('jquery'), NULL, false);
-    wp_register_script('flipclock-counter', '/wp-content/themes/work/js/vendor/counter.js', array('jquery'), NULL, false);
-    wp_enqueue_script( 'flipclock-script');
-    wp_enqueue_script( 'flipclock-counter');
+    wp_register_script('flipclock-script', '/wp-content/themes/work/js/vendor/flipclock.min.js', array('jquery'), NULL, true);
+    wp_register_script('flipclock-counter', '/wp-content/themes/work/js/vendor/counter.js', array('jquery'), NULL, true);
+    wp_enqueue_script( 'flipclock-script' );
+    wp_enqueue_script( 'flipclock-counter' );
 }
 add_action('wp_enqueue_scripts', 'vendor_files');
 

@@ -1,0 +1,21 @@
+html:lang(en-US), html:lang(en-CA) {
+    #header-outer {
+        .icl-en {
+            display: none;
+        }
+    }
+
+    form {
+        &.input-validation-error:after {
+            content: 'Please fill all the fields.';
+        }
+
+        &.valid:after {
+            content: 'Thank you!';
+        }
+    }
+
+    .fr {
+        display: none;
+    }
+}

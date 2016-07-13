@@ -27,14 +27,17 @@
         @include padding(null 25px null null);
     }
 
-    .button {
-        color: $color__btn-primary-color;
+    a.button {
+        color: $color__btn-primary-color !important;
+        display: inline-block;
         height: 32px;
+        line-height: 30px;
+        text-decoration: none;
         @include padding(0 null);
-        @include margin(null 20px null null);
+        @include margin(null 20px 15px null);
     }
 
-    a, a:visited {
+    a:not(.button), a:visited:not(.button) {
         color: $color__link-body !important;
         text-decoration: underline;
         white-space: nowrap;

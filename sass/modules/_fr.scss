@@ -1,23 +1,74 @@
-html:lang(fr-FR) {
+html:lang(fr-FR), html:lang(fr-CA) {
+    #header-outer {
+        .icl-fr {
+            display: none;
+        }
+    }
+
+    form {
+        &.input-validation-error:after {
+            content: "Remplir tous les champs, S'il vous pla\0000EEt";
+        }
+
+        &.valid:after {
+            content: 'Merci!';
+        }
+    }
+
+    .en {
+        display: none;
+    }
     .solutions-container {
         .solutions-tabs {
-                li {
-                    &:nth-of-type(1) a.active-tab:before {
-                        content: 'ENTREPRISES EN DÉMARRAGE ET PETITES ENTREPRISES';
-                    }
-
-                    &:nth-of-type(2) a.active-tab:before {
-                        content: 'MOYENNES ENTREPRISES';
-                    }
-
-                    &:nth-of-type(3) a.active-tab:before {
-                        content: 'GRANDES ENTREPRISES';
-                    }
-
-                    &:nth-of-type(4) a.active-tab:before {
-                        content: 'MULTINATIONALES ET SOCIÉTÉS DE PRESTIGE';
-                    }
+            li {
+                &:nth-of-type(1) a.active-tab:before {
+                    content: 'ENTREPRISES EN D\00c9MARRAGE ET PETITES ENTREPRISES';
                 }
+
+                &:nth-of-type(2) a.active-tab:before {
+                    content: 'MOYENNES ENTREPRISES';
+                }
+
+                &:nth-of-type(3) a.active-tab:before {
+                    content: 'GRANDES ENTREPRISES';
+                }
+
+                &:nth-of-type(4) a.active-tab:before {
+                    content: 'MULTINATIONALES ET SOCI\00c9T\00c9S DE PRESTIGE';
+                }
+            }
         }
+
+        .toggles {
+            .toggle.open {
+                &:nth-of-type(1):before {
+                    content: 'ENTREPRISES EN D\00c9MARRAGE ET PETITES ENTREPRISES';
+                }
+
+                &:nth-of-type(2):before {
+                    content: 'MOYENNES ENTREPRISES';
+                }
+
+                &:nth-of-type(3):before {
+                    content: 'GRANDES ENTREPRISES';
+                }
+
+                &:nth-of-type(4):before {
+                    content: 'MULTINATIONALES ET SOCI\00c9T\00c9S DE PRESTIGE';
+                }
+            }
+        }
+    }
+
+    // Job Posting Page - counter modifications
+    .pricing-column {
+        .dollar-sign {
+            display: none;
+        }
+    }
+
+    // Blog Posts - sidebar
+    #sidebar > div:first-child {
+        margin: 0;
     }
 }

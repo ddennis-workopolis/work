@@ -16,6 +16,7 @@ $color__worko-gray-dark:		            #25282e;
 $color__worko-teal:			                #00b8b0;
 $color__worko-purple:			            #870057;
 $color__worko-magenta:                      #a70240;
+$color__worko-red:                          #ed592a;
 
 $color__brand-primary:                      $color__worko-green-standard;
 $color__brand-secondary:                    $color__worko-blue;
@@ -46,6 +47,7 @@ $color__text-main-secondary:                lighten(#696c71, 10%);
 $color__text-heading:                       $color__worko-gray-dark;
 $color__text-heading-light:                 $color__white;
 $color__text-heading-inactive:              #999fa9;
+$color__text-alert:                         $color__worko-red;
 
 $color__btn-default-color:                  $color__text-heading-light;
 $color__btn-default-bg:                     $color__gray-lighter;
@@ -77,6 +79,9 @@ $color__site-header-link:                   $color__worko-gray-dark;
 $color__site-header-link-hover:             $color__site-header-link;
 $color__site-header-link-bg:                transparent;
 $color__site-header-link-bg-hover:          $color__site-header-link-bg;
+$color__site-header-system-messages:        $color__worko-magenta;
+
+$color__site-header-light-bg:                $color__white;
 
 $color__site-header-dark-bg:                $color__worko-gray-dark;
 $color__site-header-dark-link:              rgba($color__white, 0.7);
@@ -91,6 +96,8 @@ $color__site-header-dropdown-link-hover:    $color__white;
 $color__site-footer-bg:                     $color__worko-gray-dark;
 $color__site-footer-text:                   rgba($color__white, 0.4);
 $color__site-footer-newsletter-text:        #92969c;
+$color__site-footer-newsletter-alert-text:  $color__worko-red;
+$color__site-footer-newsletter-success-text:$color__worko-green-standard;
 $color__site-footer-heading:                $color__white;
 $color__site-footer-link:                   rgba($color__white, 0.6);
 $color__site-footer-link-hover:             $color__brand-primary;

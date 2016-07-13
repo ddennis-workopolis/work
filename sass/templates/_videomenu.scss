@@ -142,16 +142,27 @@
 
 // Media query - screen sizes >380px and < 641px
 @include media($mobile-lg) {
+    .home .videomenu-container {
+        .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
 
+            h2 {
+                margin-top: 60px;
+            }
+        }
+    }
     .videomenu-container {
         .nectar-slider-wrap[data-full-width="false"] .swiper-slide {
 
             h2 {
                 margin-bottom: 10px;
+                margin-top: 100px;
             }
 
             .content {
                 padding: 0 !important;
+                p {
+                    display: none;
+                }
             }
 
             .button {

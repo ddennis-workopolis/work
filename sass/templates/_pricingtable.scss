@@ -98,7 +98,7 @@
                 }
             }
         }
-        a {
+        a, a:visited {
             color: $color__text-heading-light;
             font-size: 16px;
             text-transform: none;
@@ -131,11 +131,11 @@
     // Table toggle to show additional prices
     .toggles {
         h3 {
-            max-width: 375px;
+            max-width: 380px;
             margin: 0 auto;
         }
         .toggle, .toggle.open {
-            a, a:hover {
+            a:not(.button), a:hover:not(.button) {
                 background-color: $color__background-body !important;
                 color: $color__link-body !important;
                 font-family: $font__main;
@@ -163,15 +163,29 @@
         tbody {
             td {
                 font-size: 14px;
+                height: 60px !important;
+                vertical-align: middle;
 
                 &:last-child {
+                    min-width: 150px;
                     text-align: center;
+                }
+
+                .discount {
+                    color: $color__text-alert;
+                }
+
+                a.button, a.button:visited {
+                    color: $color__btn-default-color;
+                    padding: 10px 20px;
+                    max-width: 185px;
                 }
             }
         }
     }
 }
 
+// Media query - screen sizes >641px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .pricing-container {
         .pricing-container-table {

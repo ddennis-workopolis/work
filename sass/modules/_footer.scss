@@ -8,6 +8,81 @@
         background-color: $color__btn-primary-bg;
         @include margin(15px null null);
     }
+    .widget:first-child {
+        margin-bottom: 0px;
+    }
+    .menu {
+        li:first-child {
+            a {
+                text-decoration: none;
+                color: $color__site-footer-heading !important;
+                font-size: 18px;
+                font-weight: $font__weight__regularbold;
+                pointer-events: none;
+                &:hover {
+                    color: $color__site-footer-heading !important;
+                }
+            }
+        }
+    }
+    .widget_wpcom_social_media_icons_widget {
+        ul li a {
+            display: inline-block !important;
+
+            &.genericon {
+                background-size: 24px;
+                height: 24px;
+                margin-right: 4px;
+                width: 24px
+            }
+            &.genericon-facebook {
+                background: url("/wp-content/themes/work/images/facebook.png") no-repeat;
+                // background: url("/staging/wp-content/themes/work/images/facebook.png");
+            }
+            &.genericon-twitter {
+                background: url("/wp-content/themes/work/images/twitter.png") no-repeat;
+                // background: url("/staging/wp-content/themes/work/images/twitter.png");
+            }
+            &.genericon-googleplus {
+                background: url("/wp-content/themes/work/images/google.png") no-repeat;
+                // background: url("/staging/wp-content/themes/work/images/google.png");
+            }
+            &.genericon-youtube {
+                background: url("/wp-content/themes/work/images/youtube.png") no-repeat;
+                // background: url("/staging/wp-content/themes/work/images/youtube.png");
+            }
+            &:before {
+                content: '';
+            }
+        }
+    }
+
+    form {
+        &.input-validation-error {
+
+            &:after {
+                color: $color__site-footer-newsletter-alert-text;
+                display: block;
+                position: relative;
+            }
+        }
+
+        &.valid {
+
+            &:after {
+                color: $color__site-footer-newsletter-success-text;
+            }
+        }
+    }
+    .newsletter-info {
+
+        a {
+            font-size: 12px;
+        }
+        p {
+            color: $color__site-footer-heading;
+        }
+    }
 }
 
 // Media query - screen sizes >640px and <=690px

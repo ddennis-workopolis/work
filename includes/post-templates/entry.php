@@ -84,7 +84,7 @@ global $layout; ?>
 			<div class="content-inner">
 
 					<?php if(!($masonry_type == 'classic_enhanced' && $using_masonry == true)) { ?>
-						<span class="meta-category"> <?php the_category(', '); ?></span>
+						<span class="meta-category pre"> <?php the_category(' '); ?></span>
 					<?php } ?>
 
 				<?php if( !is_single() && ($using_masonry == true && $masonry_type == 'classic_enhanced') ) { ?> <a class="entire-meta-link" href="<?php the_permalink(); ?>"></a><?php }

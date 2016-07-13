@@ -28,7 +28,7 @@
                 left: 0px;
                 position: absolute;
                 width: 40px;
-                @include margin(5px null null);
+                @include margin(-7px null null);
             }
         }
     }
@@ -57,6 +57,16 @@
         padding: 0 20px !important;
         .product-column {
             @include padding(null 35px null null);
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .product-container {
+        .product-column-feature {
+            &:before {
+                @include margin(5px null null);
+            }
         }
     }
 }

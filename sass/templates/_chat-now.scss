@@ -9,6 +9,7 @@
     border-top: 10px solid $color_site-content-chat-border;
     color: $color__text-heading-light;
     position: absolute;
+    text-align: center;
     top: -500px;
     z-index: 11;
     @include padding(40px);
