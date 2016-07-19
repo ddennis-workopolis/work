@@ -56,13 +56,17 @@
             display: none;
         }
     }
+}
 
-    .seeker-link {
-        position: absolute;
-        z-index: 2;
-        right: 30px;
-        bottom: 20px;
-    }
+.seeker {
+    z-index: 11;
+}
+
+.seeker-link {
+    position: fixed !important;
+    z-index: 2;
+    right: 30px;
+    bottom: 20px;
 }
 
 // Media query - screen sizes > 1170px

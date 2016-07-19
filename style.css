@@ -120,7 +120,8 @@ html {
   .full-width-content.vc_row-fluid .wpb_column .wpb_row, .full-width-content.vc_row-fluid .wpb_column .wpb_wrapper {
     margin: 0; } }
 .container-wrap {
-  min-height: 550px; }
+  min-height: 550px;
+  z-index: 12; }
 
 #header-outer {
   box-shadow: none; }
@@ -1391,7 +1392,9 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     font-size: 62px !important;
     line-height: 64px !important; }
   .pricing-container div.pricing-column h4 {
-    padding-top: 0; }
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 0; }
   .pricing-container div.pricing-column .dollar-sign {
     font-weight: 700 !important;
     top: 0px !important;
@@ -1409,7 +1412,7 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     font-size: 14px;
     font-weight: 700;
     line-height: 55px;
-    padding-top: 0px; }
+    padding: 0px; }
   .pricing-container div.pricing-column:last-child {
     background-color: #5aa323;
     margin: 0; }
@@ -1485,19 +1488,23 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     padding: 10px 20px;
     max-width: 185px; }
 
+@media only screen and (max-width: 1000px) {
+  .pricing-container div.pricing-column:last-child {
+    margin: 0 auto;
+    float: none; } }
 @media only screen and (min-width: 641px) and (max-width: 690px) {
   .pricing-container .pricing-container-table {
     display: none; }
   .pricing-container .pricing-container-table-mobile {
     display: block; }
-  .pricing-container div.pricing-column:first-child, .pricing-container div.pricing-column:nth-of-type(2n), .pricing-container div.pricing-column h3 {
+  .pricing-container div.pricing-column:first-child, .pricing-container div.pricing-column:nth-of-type(2), .pricing-container div.pricing-column:nth-of-type(3), .pricing-container div.pricing-column h3 {
     background-color: #25282e;
     color: #FFFFFF !important; }
-  .pricing-container div.pricing-column:first-child h4, .pricing-container div.pricing-column:first-child .interval, .pricing-container div.pricing-column:nth-of-type(2n) h4, .pricing-container div.pricing-column:nth-of-type(2n) .interval {
+  .pricing-container div.pricing-column:first-child h4, .pricing-container div.pricing-column:first-child .interval, .pricing-container div.pricing-column:nth-of-type(2) h4, .pricing-container div.pricing-column:nth-of-type(2) .interval, .pricing-container div.pricing-column:nth-of-type(3) h4, .pricing-container div.pricing-column:nth-of-type(3) .interval {
     color: #FFFFFF !important; }
-  .pricing-container div.pricing-column:first-child .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(2n) .pricing-column-content ul {
+  .pricing-container div.pricing-column:first-child .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(2) .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(3) .pricing-column-content ul {
     height: auto !important; }
-    .pricing-container div.pricing-column:first-child .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(2n) .pricing-column-content ul li {
+    .pricing-container div.pricing-column:first-child .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(2) .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(3) .pricing-column-content ul li {
       background-color: #25282e;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       color: rgba(255, 255, 255, 0.7) !important; }
@@ -1510,14 +1517,14 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     display: none; }
   .pricing-container .pricing-container-table-mobile {
     display: block; }
-  .pricing-container div.pricing-column:first-child, .pricing-container div.pricing-column:nth-of-type(2n), .pricing-container div.pricing-column h3 {
+  .pricing-container div.pricing-column:first-child, .pricing-container div.pricing-column:nth-of-type(2), .pricing-container div.pricing-column:nth-of-type(3), .pricing-container div.pricing-column h3 {
     background-color: #25282e;
     color: #FFFFFF !important; }
-  .pricing-container div.pricing-column:first-child h4, .pricing-container div.pricing-column:first-child .interval, .pricing-container div.pricing-column:nth-of-type(2n) h4, .pricing-container div.pricing-column:nth-of-type(2n) .interval {
+  .pricing-container div.pricing-column:first-child h4, .pricing-container div.pricing-column:first-child .interval, .pricing-container div.pricing-column:nth-of-type(2) h4, .pricing-container div.pricing-column:nth-of-type(2) .interval, .pricing-container div.pricing-column:nth-of-type(3) h4, .pricing-container div.pricing-column:nth-of-type(3) .interval {
     color: #FFFFFF !important; }
-  .pricing-container div.pricing-column:first-child .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(2n) .pricing-column-content ul {
+  .pricing-container div.pricing-column:first-child .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(2) .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(3) .pricing-column-content ul {
     height: auto !important; }
-    .pricing-container div.pricing-column:first-child .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(2n) .pricing-column-content ul li {
+    .pricing-container div.pricing-column:first-child .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(2) .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(3) .pricing-column-content ul li {
       background-color: #25282e;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       color: rgba(255, 255, 255, 0.7) !important; }
@@ -1530,14 +1537,14 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     display: none; }
   .pricing-container .pricing-container-table-mobile {
     display: block; }
-  .pricing-container div.pricing-column:first-child, .pricing-container div.pricing-column:nth-of-type(2n), .pricing-container div.pricing-column h3 {
+  .pricing-container div.pricing-column:first-child, .pricing-container div.pricing-column:nth-of-type(2), .pricing-container div.pricing-column:nth-of-type(3), .pricing-container div.pricing-column h3 {
     background-color: #25282e;
     color: #FFFFFF !important; }
-  .pricing-container div.pricing-column:first-child h4, .pricing-container div.pricing-column:first-child .interval, .pricing-container div.pricing-column:nth-of-type(2n) h4, .pricing-container div.pricing-column:nth-of-type(2n) .interval {
+  .pricing-container div.pricing-column:first-child h4, .pricing-container div.pricing-column:first-child .interval, .pricing-container div.pricing-column:nth-of-type(2) h4, .pricing-container div.pricing-column:nth-of-type(2) .interval, .pricing-container div.pricing-column:nth-of-type(3) h4, .pricing-container div.pricing-column:nth-of-type(3) .interval {
     color: #FFFFFF !important; }
-  .pricing-container div.pricing-column:first-child .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(2n) .pricing-column-content ul {
+  .pricing-container div.pricing-column:first-child .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(2) .pricing-column-content ul, .pricing-container div.pricing-column:nth-of-type(3) .pricing-column-content ul {
     height: auto !important; }
-    .pricing-container div.pricing-column:first-child .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(2n) .pricing-column-content ul li {
+    .pricing-container div.pricing-column:first-child .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(2) .pricing-column-content ul li, .pricing-container div.pricing-column:nth-of-type(3) .pricing-column-content ul li {
       background-color: #25282e;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       color: rgba(255, 255, 255, 0.7) !important; }
@@ -1637,11 +1644,15 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
       background-color: #5aa323 !important; }
     .videomenu-container .button:nth-of-type(2) {
       display: none; }
-  .videomenu-container .seeker-link {
-    position: absolute;
-    z-index: 2;
-    right: 30px;
-    bottom: 20px; }
+
+.seeker {
+  z-index: 11; }
+
+.seeker-link {
+  position: fixed !important;
+  z-index: 2;
+  right: 30px;
+  bottom: 20px; }
 
 @media screen and (min-width: 1170px) {
   .videomenu-container .nectar-slider-wrap[data-full-width="false"] .swiper-slide .content h2 {
@@ -1876,6 +1887,8 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
   .blog-categories-container .title {
     line-height: 20px;
     margin-bottom: 15px; }
+    .blog-categories-container .title span {
+      font-size: 14px; }
   .blog-categories-container .title a, .blog-categories-container .title a:hover, .blog-categories-container .title a:visited {
     color: #007ac9;
     font-size: 14px; }
@@ -1931,6 +1944,8 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     text-transform: none; }
   .posts-container-sidebar a {
     color: #007ac9 !important;
+    font-size: 14px; }
+  .posts-container-sidebar span {
     font-size: 14px; }
 
 .newsletter-form form {
@@ -2050,17 +2065,18 @@ html:lang(fr-FR) #sidebar > div:first-child, html:lang(fr-CA) #sidebar > div:fir
     width: 100%; }
     .faq-container .faq-column:last-child {
       padding: 40px 20px !important; } }
-.home .chat-now {
-  top: 150px; }
+.chat-container {
+  display: none;
+  z-index: 20; }
 
 .chat-now {
   background-color: #5aa323;
   border-top: 10px solid #25282e;
   color: #FFFFFF;
-  position: absolute;
+  position: fixed;
   text-align: center;
-  top: -500px;
-  z-index: 11;
+  top: 40%;
+  z-index: 12;
   padding: 40px; }
   .chat-now .close {
     background: url("/wp-content/themes/work/images/close.png") no-repeat;

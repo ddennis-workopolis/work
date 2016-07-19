@@ -30,7 +30,8 @@
         }
 
         h4 {
-            @include padding(0 null null);
+            @include margin(0 null 8px);
+            @include padding(0);
         }
 
         .dollar-sign {
@@ -57,7 +58,7 @@
                     font-size: 14px;
                     font-weight: $font__weight__bold;
                     line-height: 55px;
-                    padding-top: 0px;
+                    padding: 0px;
                 }
             }
         }
@@ -185,6 +186,18 @@
     }
 }
 
+// Media query - screen sizes <= 1000px
+@media only screen and (max-width: 1000px) {
+    .pricing-container {
+        div.pricing-column {
+            &:last-child {
+                margin: 0 auto;
+                float: none;
+            }
+        }
+    }
+}
+
 // Media query - screen sizes >641px and < 690px
 @media only screen and (min-width: 641px) and (max-width: 690px) {
     .pricing-container {
@@ -197,12 +210,12 @@
         }
 
         div.pricing-column {
-            &:first-child, &:nth-of-type(2n), h3 {
+            &:first-child, &:nth-of-type(2), &:nth-of-type(3), h3 {
                 background-color: $color__text-heading;
                 color: $color__text-heading-light !important;
             }
 
-            &:first-child, &:nth-of-type(2n) {
+            &:first-child, &:nth-of-type(2), &:nth-of-type(3) {
                 h4, .interval {
                     color: $color__text-heading-light !important;
                 }
@@ -245,12 +258,12 @@
         }
 
         div.pricing-column {
-            &:first-child, &:nth-of-type(2n), h3 {
+            &:first-child, &:nth-of-type(2), &:nth-of-type(3), h3 {
                 background-color: $color__text-heading;
                 color: $color__text-heading-light !important;
             }
 
-            &:first-child, &:nth-of-type(2n) {
+            &:first-child, &:nth-of-type(2), &:nth-of-type(3) {
                 h4, .interval {
                     color: $color__text-heading-light !important;
                 }
@@ -293,12 +306,12 @@
         }
 
         div.pricing-column {
-            &:first-child, &:nth-of-type(2n), h3 {
+            &:first-child, &:nth-of-type(2), &:nth-of-type(3), h3 {
                 background-color: $color__text-heading;
                 color: $color__text-heading-light !important;
             }
 
-            &:first-child, &:nth-of-type(2n) {
+            &:first-child, &:nth-of-type(2), &:nth-of-type(3) {
                 h4, .interval {
                     color: $color__text-heading-light !important;
                 }

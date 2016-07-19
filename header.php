@@ -25,6 +25,7 @@
 <title> <?php wp_title("|",true, 'right'); ?> <?php if (!defined('WPSEO_VERSION')) { bloginfo('name'); } ?></title>
 
 <!-- Custom Meta Tags - Analytics -->
+<?php if(!is_single()) { ?>
 <?php $post_id = get_post($post->post_parent);
 $parentpagetitle = $post_id->post_title;
 ?>
@@ -33,6 +34,13 @@ $parentpagetitle = $post_id->post_title;
 <meta name="Site Page Type" content="<?php { the_title_attribute(); } ?>"/>
 <meta name="PageName" content=""/>
 <!-- End Custom Meta Tags - Analytics -->
+
+<?php } else { ?>
+	<meta name="Section" content="Employer"/>
+	<meta name="Site Sub-Section" content="Resources"/>
+	<meta name="Site Page Type" content="Article"/>
+	<meta name="PageName" content="<?php { the_title_attribute(); } ?>"/>
+<?php } ?>
 
 <?php wp_head(); ?>
 

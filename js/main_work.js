@@ -2,27 +2,27 @@
 
     //Makes a cookie
     function createCookie(name, value, days) {
-    	if (days) {
-    		var date = new Date();
-    		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    		var expires = "; expires=" + date.toGMTString();
-    	}
-    	else var expires = "";
-    	document.cookie = name + "=" + value + expires + "; path=/";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
     }
     //Observer for Source Sans Pro with each font-weight used declared
     var observer = new FontFaceObserver('Gotham', {
-    	weight: 400,
-    	weight: 600,
-    	weight: 700
+        weight: 400,
+        weight: 600,
+        weight: 700
     });
 
-    	if (document.cookie.indexOf("fonts-loaded") < 0) {
-    		console.log('All of your fonts are ready');
-    		document.documentElement.className += " fonts-loaded";
-    		//set the cookie to expire in two weeks
-    		createCookie("fonts-loaded", "true", "14");
-    	}
+    if (document.cookie.indexOf("fonts-loaded") < 0) {
+        console.log('All of your fonts are ready');
+        document.documentElement.className += " fonts-loaded";
+        //set the cookie to expire in two weeks
+        createCookie("fonts-loaded", "true", "14");
+    }
 
     var height;
     $(window).scroll(function() {
@@ -52,7 +52,6 @@
             var emailRegex = "[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?";
 
             var name = $(this).closest('tr').siblings('tr').find('.name').val();
-            console.log(name);
             var email = $(this).closest('tr').siblings('tr').find('.email').val();
             if( (email.length > 0 && !email.match(emailRegex)) || email.length <= 0 || name.length <= 0) {
                 event.preventDefault();
@@ -66,9 +65,14 @@
             $(this).find('button').attr('disabled','disabled');
         });
 
+        // Display the chat window after 60 seconds
+        $(function() {
+            $(".chat-container").delay(60000).fadeIn();
+        });
+
         // Hiding div when the .close is clicked.
         $('.close').click(function() {
-            $('.chat-now').css('display', 'none');
+            $('.chat-now').toggle("slide");
         });
 
         // Display system messages at the very top of the web page

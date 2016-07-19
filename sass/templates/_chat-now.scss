@@ -1,17 +1,16 @@
-.home {
-    .chat-now {
-        top: 150px;
-    }
+.chat-container {
+    display: none;
+    z-index: 20;
 }
 
 .chat-now {
     background-color: $color_site-content-chat-bg;
     border-top: 10px solid $color_site-content-chat-border;
     color: $color__text-heading-light;
-    position: absolute;
+    position: fixed;
     text-align: center;
-    top: -500px;
-    z-index: 11;
+    top: 40%;
+    z-index: 12;
     @include padding(40px);
 
     .close {

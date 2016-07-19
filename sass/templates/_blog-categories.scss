@@ -86,6 +86,9 @@
     .title {
         line-height: 20px;
         @include margin(null null 15px);
+        span {
+            font-size: 14px;
+        }
     }
     .title a, .title a:hover, .title a:visited {
         color: $color__link-body;
